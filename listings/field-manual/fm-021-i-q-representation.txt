@@ -1,0 +1,6 @@
+Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / I/Q representation
+Listing 22 of 57 (index 21, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: I/Q definition
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+s(t) = I(t)*cos(2*pi*fc*t) - Q(t)*sin(2*pi*fc*t)

@@ -1,0 +1,12 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Fixed-point or floating-point NCO: advantages and caveats
+Listing 53 of 119 (index 52, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: output of examples/nco_fixed_vs_float.c, reproduced exactly by building and running it
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+uint32 accumulator:           -4.828 deg
+float32 turns, wrapped:     -463.487 deg
+float64 turns, wrapped:       +0.000 deg
+float32 radians, never wrapped:
+  final phase 4.1943e+06 rad, ideal 2.26195e+07 rad
+  spacing of floats there: 0.5 rad, increment 0.1309 rad
+  phase stopped growing after 523 s (sample 25107822)

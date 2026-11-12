@@ -1,0 +1,7 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / 2. Getting from a real signal to I/Q: the quadrature mixer
+Listing 47 of 119 (index 46, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: - | Checked by: formulas I = LPF[x cos], Q = LPF[x -sin] (implemented by HB[47]; mixing-to-DC test in test_B_nco.c)
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+I(t) = LPF[ x(t) * cos(2*pi*fc*t) ]
+Q(t) = LPF[ x(t) * -sin(2*pi*fc*t) ]

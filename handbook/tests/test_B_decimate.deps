@@ -1,0 +1,1 @@
+src/hb_fir_float.c src/hb_decimate.c src/hb_polyphase.c

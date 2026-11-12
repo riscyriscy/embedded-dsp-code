@@ -1,0 +1,18 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / The NCO in detail: accumulator, table, and fixed-point limits
+Listing 52 of 119 (index 51, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: tools/nco_measure.py run against nco_demo builds at 6, 8, 10 and 12 table bits (needs numpy; not part of make test); reproduced exactly, including the lines below the table
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+table  interp   worst SFDR   median SFDR   (40 random coherent tones, 2^20 samples)
+   64  none        36.0 dB       36.0 dB
+   64  linear      72.0 dB       72.0 dB
+  256  none        48.1 dB       48.1 dB
+  256  linear      96.3 dB       96.3 dB
+ 1024  none        60.2 dB       60.2 dB
+ 4096  none        72.2 dB       72.2 dB
+
+frequency step (fs / 2^32):      11.176 uHz
+phase_inc for 1000 Hz at 48 kHz: 89478485  (exact value 89478485.3333)
+actual frequency:                999.999996275 Hz  (error -3.725e-06 Hz)
+phase drift against an ideal 1 kHz after 1 hour: -4.83 degrees
+16-bit accumulator instead:      step 0.7324 Hz, 1000 Hz becomes 999.7559 Hz

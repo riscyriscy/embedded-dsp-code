@@ -1,0 +1,9 @@
+Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Loop design: Bn*T, zeta, Kp, Ki
+Listing 36 of 57 (index 35, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: loop design equations
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+theta_n = (Bn*T) / (zeta + 1/(4*zeta))
+
+Kp = (4*zeta*theta_n)   / (1 + 2*zeta*theta_n + theta_n*theta_n) / Kd
+Ki = (4*theta_n*theta_n) / (1 + 2*zeta*theta_n + theta_n*theta_n) / Kd

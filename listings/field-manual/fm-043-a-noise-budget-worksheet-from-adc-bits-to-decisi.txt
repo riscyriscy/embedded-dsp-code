@@ -1,0 +1,29 @@
+Embedded DSP Field Manual, Chapter 7: RF Numbers You Must Type / A noise budget worksheet: from ADC bits to decision SNR
+Listing 44 of 57 (index 43, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (worksheet) | Checked by: noise budget worksheet in a code block
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+Stage 1 - ADC quantization floor, then AGC backoff:
+  12-bit ADC, full-scale sine -> ideal SNR = 6.02*12 + 1.76 = 74.0 dB
+  A real burst is backed off from full scale for peak headroom; that backoff costs dB
+  for dB against the ideal ceiling above:
+  illustrative 6 dB backoff -> usable SNR = 74.0 - 6.0 = 68.0 dB
+
+Stage 2 - CIC output truncated to 16 bits adds its own, independent noise; combine
+as POWER, not dB (1/SNR_total = sum of 1/SNR_i, linear ratios):
+  16-bit stage alone: 6.02*16 + 1.76 = 98.1 dB -> combined with Stage 1: still 68.0 dB
+  (the 16-bit stage is negligible next to it)
+
+Stage 3 - Matched filter / RRC processing gain: ~10*log10(sps) dB, coherent signal sum
+vs. incoherent noise sum. This also converts the running number to a SYMBOL-rate SNR
+(~Es/N0), not bit-rate. sps = 8 here (illustrative production chain, NOT Chapter 10's
+2 sps loopback - that chain would show +3.0 dB at this stage, not +9.0 dB):
+  sps = 8 -> +9.0 dB -> 77.0 dB
+
+Stage 4 - Equalizer residual: steady-state excess MSE, typically the worst single
+number in the chain:
+  illustrative residual: 27.0 dB -> final symbol SNR (~Es/N0): 27.0 dB
+
+Compare in the SAME UNITS: uncoded QPSK needs ~9.6 dB Eb/N0 for 1e-5 BER. QPSK carries
+2 bits/symbol, so in Es/N0 terms: 9.6 + 10*log10(2) = 9.6 + 3.0 = 12.6 dB:
+  margin = 27.0 - 12.6 = 14.4 dB

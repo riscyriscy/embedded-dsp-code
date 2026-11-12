@@ -1,0 +1,15 @@
+Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / FIR or IIR: where each one fits, and what each one costs
+Listing 11 of 119 (index 10, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: printed results of tools/fir_vs_iir.py (needs numpy and scipy; not part of make test); reproduced exactly by running it
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+FIR taps rounded to Q15: stopband 57.4 dB (was 60.2)
+Elliptic, 14 fractional bits: stopband 59.9 dB, pole radius 0.994676
+
+Same spec scaled down to 100 / 150 Hz:
+  elliptic: 3 biquads, 15 mults; FIR: 2081 taps (10-tap steps)
+  as designed: pole radius 0.999463
+  14 fractional bits: pole radius 0.999451
+    stopband 30.6 dB, passband ripple 24.4 dB
+  12 fractional bits: pole radius 1.000000
+    stopband 60.2 dB, passband ripple nan dB

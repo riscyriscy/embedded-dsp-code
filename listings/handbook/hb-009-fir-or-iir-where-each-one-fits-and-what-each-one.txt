@@ -1,0 +1,13 @@
+Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / FIR or IIR: where each one fits, and what each one costs
+Listing 10 of 119 (index 9, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: printed table of tools/fir_vs_iir.py (needs numpy and scipy; not part of make test); reproduced exactly by running it
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+1 kHz / 1.5 kHz at fs = 48 kHz, <= 1 dB ripple, >= 60 dB stopband
+design        size        mults  delay, samples   settles, samples
+FIR (PM)      209 taps      105  104 (constant)    209
+Butterworth   10 biquads     50  89.2 to 191.1     654
+Chebyshev I   5 biquads      25  55.0 to 318.2    1485
+Elliptic      3 biquads      15  26.8 to 211.5    1066
+(FIR mults use symmetry; IIR is 5 mults per biquad; delay is across
+ the passband; settles = samples above 0.1% of the peak response)

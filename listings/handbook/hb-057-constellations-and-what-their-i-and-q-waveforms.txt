@@ -1,0 +1,11 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Constellations and what their I and Q waveforms look like
+Listing 58 of 119 (index 57, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: output of tools/iq_waveforms.py (needs numpy and matplotlib; not part of make test), reproduced exactly; the same block is FM[27]
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+RRC alpha 0.35, 8 samples/symbol, 20000 random symbols, seed 7
+scheme  bits/sym  PAPR, dB  min |x| / rms
+BPSK        1      3.84      0.000
+QPSK        2      3.79      0.000
+16-QAM      4      6.02      0.004
+GFSK        1      0.00      1.000

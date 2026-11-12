@@ -1,0 +1,21 @@
+Embedded DSP Handbook, Chapter 9: Loop-Filter Tuning for Costas and Gardner Loops / The standard second-order loop design equations
+Listing 78 of 119 (index 77, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as:  | Checked by: formulas; delivered zeta / Bn*T checked from closed-loop poles and impulse response (tests/test_C_ch9_design.c)
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+theta_n = (Bn*T) / (zeta + 1/(4*zeta))     // natural frequency, normalized
+
+Kp = (4*zeta*theta_n) / (1 + 2*zeta*theta_n + theta_n*theta_n) / Kd
+Ki = (4*theta_n*theta_n)  / (1 + 2*zeta*theta_n + theta_n*theta_n) / Kd
+
+// Kd = "detector gain" - the slope of your phase/timing error detector
+// near zero error (S-curve slope at the origin), in the detector's own
+// output units per radian (Costas) or per symbol of timing error (Gardner),
+// so Kp and Ki come out as correction per detector unit. For the Costas
+// detector above, Kd = 2*A with A the decision amplitude; for Gardner it
+// is about 1.1 to 1.5 * A*A/2^16 per rail for raised-cosine pulses with
+// alpha 0.35 to 0.5, and depends on pulse shape and samples/symbol. In
+// practice Kd is measured empirically (sweep a known phase/timing offset
+// through the detector and fit the slope) rather than derived
+// analytically, because pulse shape and SNR both shift it slightly from
+// the ideal textbook value.

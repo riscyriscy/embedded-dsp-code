@@ -1,0 +1,15 @@
+Embedded DSP Handbook, Chapter 14: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Thread versions, stacks, footprint, and caveats
+Listing 98 of 119 (index 97, counting from 0 in book order), exactly as it appears in the book.
+Status: reference-only | Built as: (reference) | Checked by: memory figures quoted from the Nordic nRF Connect SDK documentation and the OpenThread memory page; archived, not reproducible here
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+nRF52840, OpenThread stack + application (kB)
+              master   FTD   MTD
+ROM             453    357   305
+RAM             102     93    83
+nRF5340 (FTD, MTD only)
+              FTD   MTD
+ROM           327   274
+RAM           100    90
+Source: Nordic nRF Connect SDK docs, OpenThread memory page, read in November 2026.
+SDK release not named on the page; persistent storage extra.

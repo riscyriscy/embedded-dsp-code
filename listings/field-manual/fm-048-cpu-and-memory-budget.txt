@@ -1,0 +1,22 @@
+Embedded DSP Field Manual, Chapter 9: FEC and the CPU Budget / CPU and memory budget
+Listing 49 of 57 (index 48, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (worked example) | Checked by: CPU budget numbers
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+sample_rate = 9600 * 2 = 19200 Hz                           // the matched filter's own rate
+
+matched_filter_cost = 19 taps * 3 cycles/tap * 2 rails (I, Q) = 114 cycles/sample   // this book's own
+                                                                                      // ~3 cycles/tap
+                                                                                      // float-FIR figure
+filter_cycles_per_second = 19200 * 114 = 2,188,800
+
+loop_and_decision_cost = timing_loop_update_cost + carrier_loop_update_cost + decision_cost
+                        ~= 20 + 20 + 5 = 45 cycles/symbol      // illustrative: each loop update is a
+                                                                 // handful of Q16 multiply-adds
+loop_cycles_per_second = 9600 * 45 = 432,000
+
+required_cycles_per_second = 2,188,800 + 432,000 = 2,620,800
+
+available_cycles_per_second = 80,000,000 * 0.5 = 40,000,000    // 80 MHz M4, 50% budgeted to this chain
+
+ratio = 2,620,800 / 40,000,000 ~= 0.066

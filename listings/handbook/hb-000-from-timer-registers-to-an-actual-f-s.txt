@@ -1,0 +1,6 @@
+Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / From timer registers to an actual f_s
+Listing 1 of 119 (index 0, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: formula; worked example 80 MHz -> 8 kHz (PSC = ARR = 99) and the "many pairs" claim checked in tests/test_A_claims.c
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+f_s = f_TIM / (PSC + 1) / (ARR + 1)

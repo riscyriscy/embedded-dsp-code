@@ -1,0 +1,6 @@
+Embedded DSP Field Manual, Chapter 7: RF Numbers You Must Type / Noise floor and link budget
+Listing 42 of 57 (index 41, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: noise floor
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+N_dBm = -174 + 10*log10(B_Hz) + NF_dB

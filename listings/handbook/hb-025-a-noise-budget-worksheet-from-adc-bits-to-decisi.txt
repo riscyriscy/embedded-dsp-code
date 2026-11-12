@@ -1,0 +1,41 @@
+Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / A noise budget worksheet: from ADC bits to decision SNR
+Listing 26 of 119 (index 25, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (worksheet) | Checked by: worksheet in a code block; every dB figure recomputed (power-sum, 10log10(sps), 9.6+3.0 = 12.6, margin 14.4, BER 1e-5 at 9.6 dB) in tests/test_A_claims.c
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+Stage 1 - ADC quantization floor (Chapter 1's 6.02n + 1.76 dB), then AGC backoff:
+  12-bit ADC, full-scale sine -> ideal SNR = 6.02*12 + 1.76 = 74.0 dB
+  A real receiver's AGC never drives a burst right up to the clipping rail - it backs
+  off to leave headroom for peaks above the average power and for interference the AGC
+  hasn't fully settled around. That backoff costs dB for dB against the ideal number
+  above, since quantization noise power is fixed while signal power drops by whatever
+  the backoff is; 74.0 dB is a ceiling this stage can't exceed, not what a real burst
+  actually delivers:
+  illustrative 6 dB of AGC backoff (a representative target, not a universal constant)
+  -> usable SNR = 74.0 - 6.0 = 68.0 dB
+
+Stage 2 - CIC output truncated to a stored word width adds its OWN, independent
+quantization noise; combine as power, not dB (uncorrelated noise sources: 1/SNR_total
+= sum of 1/SNR_i, in linear ratios, not the dB values directly):
+  truncate to 16 bits -> that stage alone: 6.02*16 + 1.76 = 98.1 dB
+  combined with Stage 1's 68.0 dB -> still 68.0 dB (the 16-bit stage is negligible next to it)
+
+Stage 3 - Matched filter / RRC processing gain: correlating across sps samples per
+symbol adds ~10*log10(sps) dB, since wanted signal energy sums coherently while noise
+sums incoherently. This step also turns the running number into a SYMBOL-rate SNR
+(~Es/N0), not a bit-rate one - that distinction matters for the comparison below. It
+also assumes Stages 1-2's SNR was measured over the same full sample-rate noise
+bandwidth this gain is computed against; if an earlier stage already narrowed that
+bandwidth (a decimating CIC among them), that stage's own filtering gain needs folding
+in first rather than applying 10*log10(sps) again on top of it:
+  sps = 8 -> +9.0 dB -> 77.0 dB
+
+Stage 4 - Equalizer residual: LMS never converges to exactly zero error; its
+steady-state excess MSE acts as one more independent noise floor, typically the
+worst single number in the whole chain rather than the ADC or CIC stages:
+  illustrative equalizer residual: 27.0 dB -> combined final symbol SNR (~Es/N0): 27.0 dB
+
+Compare against the target IN THE SAME UNITS (Appendix C): uncoded QPSK needs roughly
+9.6 dB Eb/N0 for a 1e-5 BER. QPSK carries 2 bits/symbol, so that threshold in this
+worksheet's own Es/N0 terms is Eb/N0 + 10*log10(2) = 9.6 + 3.0 = 12.6 dB:
+  margin = 27.0 - 12.6 = 14.4 dB

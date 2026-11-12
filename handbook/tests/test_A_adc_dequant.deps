@@ -1,0 +1,1 @@
+src/hb_adc_q15.c src/hb_dequant.c

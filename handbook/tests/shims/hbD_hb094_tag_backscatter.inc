@@ -1,0 +1,16 @@
+/* TEST-ONLY shim: HB[94] verbatim (Embedded DSP Handbook, Chapter 12).  Included by tests/test_D_snippets.c together with a stub for the
+ * undefined HAL symbols set_antenna_load / LOAD_STATE_HIGH / LOAD_STATE_LOW.  MIT License. */
+// Conceptual illustration of backscatter load modulation at the tag (not something you'd
+// implement on a general MCU - real passive tags use dedicated analog frontend silicon -
+// but useful for understanding what that silicon is doing.)
+void tag_backscatter_bit(uint8_t bit) {
+    if (bit) {
+        set_antenna_load(LOAD_STATE_HIGH);   // shifts reflected amplitude/phase one way
+    } else {
+        set_antenna_load(LOAD_STATE_LOW);    // shifts it the other way
+    }
+    // The reader observes this as a small amplitude ripple on its own transmitted carrier,
+    // demodulated with the same envelope-detection approach shown above (often via a
+    // synchronous subcarrier at a fixed offset frequency, e.g. 847 kHz for ISO 14443 Type A,
+    // to separate the weak backscatter signal from the much stronger transmitted carrier).
+}

@@ -1,0 +1,6 @@
+Embedded DSP Field Manual, Chapter 11: FMAC and CMSIS-DSP Cheat Sheet / FMAC: the practical shape
+Listing 55 of 57 (index 54, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: FMAC throughput
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+max sample rate = Hclk / (2 x N)

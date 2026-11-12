@@ -1,0 +1,6 @@
+Embedded DSP Handbook, Chapter 3: STM32 FMAC (Filter Math Accelerator) / Throughput: the number that actually matters for design
+Listing 28 of 119 (index 27, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: FMAC throughput formula; 68 taps for 2 Msps and 1.08 MHz for 127 taps at 275 MHz checked in tests/test_A_claims.c
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+max sample rate = Hclk / (2 x N)

@@ -1,0 +1,7 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / The NCO in detail: accumulator, table, and fixed-point limits
+Listing 50 of 119 (index 49, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: NCO frequency and step formulas; worked numbers are in HB[51]
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+f_out = phase_inc * fs / 2^32          (phase_inc is an integer, 0 to 2^32 - 1)
+step  = fs / 2^32                      (the smallest change in f_out)

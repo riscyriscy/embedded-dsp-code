@@ -1,0 +1,6 @@
+Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / Designing FIR coefficients
+Listing 4 of 119 (index 3, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: Kaiser tap-count formula; the worked 18-tap estimate checked in tests/test_A_claims.c; the 19-tap remez design meets the 40 dB spec (tests/test_A_fir_q15.c)
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+N ≈ (A_stop_dB - 8) / (2.285 * delta_omega)

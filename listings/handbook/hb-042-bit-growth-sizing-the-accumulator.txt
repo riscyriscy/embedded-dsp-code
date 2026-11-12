@@ -1,0 +1,6 @@
+Embedded DSP Handbook, Chapter 5: Multirate DSP: Decimation, Interpolation, and CIC Filters / Bit growth: sizing the accumulator
+Listing 43 of 119 (index 42, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (checked in tests/test_B_cic.c) | Checked by: one-line formula; its worked numbers (18 bits, 34-bit accumulator) are asserted in test_B_cic.c
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+growth_bits = ceil(N * log2(M))

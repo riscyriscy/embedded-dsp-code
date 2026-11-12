@@ -1,0 +1,6 @@
+Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / 1. The purpose of I/Q representation
+Listing 46 of 119 (index 45, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: - | Checked by: formula s(t) = I cos - Q sin (its convention is exercised by test_B_qpsk.c upconvert loopback)
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+s(t) = I(t)*cos(2*pi*fc*t) - Q(t)*sin(2*pi*fc*t)

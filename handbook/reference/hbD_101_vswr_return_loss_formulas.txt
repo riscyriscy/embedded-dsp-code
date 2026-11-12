@@ -1,0 +1,7 @@
+# Embedded DSP Handbook, HB[101]: Chapter 16, reflection coefficient / VSWR / return loss (formulas)
+# Status: not-code (formula).  Listing reproduced verbatim below this banner; MIT License.
+# -----
+Gamma = (Z_antenna - Z_0) / (Z_antenna + Z_0)     // Z_0 is the system impedance, usually 50 ohms
+
+VSWR = (1 + |Gamma|) / (1 - |Gamma|)               // ranges from 1.0 (perfect match) upward
+Return_loss_dB = -20 * log10(|Gamma|)              // higher dB = better match

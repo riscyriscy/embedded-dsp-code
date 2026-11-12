@@ -1,0 +1,12 @@
+# Embedded DSP Handbook, HB[100]: Chapter 15, AT command sequence for a cellular modem socket (exact commands are module-specific)
+# Status: reference-only (AT commands, not C).  Listing reproduced verbatim below this banner; MIT License.
+# -----
+// Illustrative AT command sequence for opening a socket and sending data
+// (exact commands are module- and carrier-specific; check the module's AT command reference).
+AT+CFUN=1              // enable full functionality (radio on)
+AT+CEREG?               // check network registration status
+AT+CGDCONT=1,"IP","<apn>"   // set the packet-data context (APN) for the carrier
+AT+USOCR=6              // create a TCP socket
+AT+USOCO=0,"<host>",<port>  // connect the socket
+AT+USOWR=0,<len>        // write <len> bytes to the socket
+AT+USOCL=0              // close the socket

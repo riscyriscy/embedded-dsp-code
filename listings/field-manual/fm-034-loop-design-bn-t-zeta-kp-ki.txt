@@ -1,0 +1,12 @@
+Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Loop design: Bn*T, zeta, Kp, Ki
+Listing 35 of 57 (index 34, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (procedure) | Checked by: tuning procedure, prose in a code block
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+1. Inject a known, fixed offset - phase for Costas, timing for Gardner - comfortably inside the
+   detector's linear region, not near the edges where it saturates or wraps.
+2. Run it through costas_phase_error() or gardner_error() and log the raw output, averaged over
+   enough symbols at that offset to wash out noise.
+3. Repeat at a few more known offsets, both directions.
+4. Kd is the slope of (detector output) vs. (known offset) across those points - a linear fit,
+   not a two-point line, since real detectors bend near the edges of that region.

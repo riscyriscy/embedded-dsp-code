@@ -1,0 +1,4 @@
+# Embedded DSP Handbook, HB[90]: Chapter 11, DSSS processing gain (formula in a code block)
+# Status: not-code (formula).  Listing reproduced verbatim below this banner; MIT License.
+# -----
+Processing_gain_dB = 10 * log10(chip_rate / bit_rate)

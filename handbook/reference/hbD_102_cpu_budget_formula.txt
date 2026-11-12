@@ -1,0 +1,19 @@
+# Embedded DSP Handbook, HB[102]: Chapter 17, CPU budget formula (pseudo-code)
+# Status: not-code (pseudo-code).  Listing reproduced verbatim below this banner; MIT License.
+# -----
+required_cycles_per_second =
+    symbol_rate * (
+        matched_filter_taps * 2        // FIR: multiply + accumulate per tap
+      + timing_loop_update_cost        // Gardner TED + loop filter, roughly fixed per symbol
+      + carrier_loop_update_cost       // Costas detector + loop filter, roughly fixed per symbol
+      + equalizer_taps * 4             // LMS: filter (2x) + weight update (2x) per tap, if present
+      + decision_cost                  // a few compares; negligible next to the above
+    )
+    + fec_decode_cost_per_second       // amortized Viterbi/LDPC cost, computed separately
+
+// Compare against your MCU's available budget:
+available_cycles_per_second = cpu_clock_hz * fraction_of_cpu_time_available_for_this_task
+
+// A required/available ratio meaningfully above 1 means: reduce filter/equalizer taps,
+// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 3/6), or move to
+// dedicated radio silicon rather than software demodulation on the general MCU.

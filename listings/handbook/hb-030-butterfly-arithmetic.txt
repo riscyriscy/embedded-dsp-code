@@ -1,0 +1,7 @@
+Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / Butterfly arithmetic
+Listing 31 of 119 (index 30, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (formula) | Checked by: butterfly formulas X = A + W*B, Y = A - W*B; the implementation is hb_complex.h (HB[31], foundation) and is tested by its owner
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+X = A + W*B
+Y = A - W*B

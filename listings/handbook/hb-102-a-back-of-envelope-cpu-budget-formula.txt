@@ -1,0 +1,21 @@
+Embedded DSP Handbook, Chapter 17: CPU Processing Requirements for Modulation and Demodulation / A back-of-envelope CPU budget formula
+Listing 103 of 119 (index 102, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: reference/hbD_102_cpu_budget_formula.txt | Checked by: pseudo-code formula with no worked numbers; nothing numeric to test
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+required_cycles_per_second =
+    symbol_rate * (
+        matched_filter_taps * 2        // FIR: multiply + accumulate per tap
+      + timing_loop_update_cost        // Gardner TED + loop filter, roughly fixed per symbol
+      + carrier_loop_update_cost       // Costas detector + loop filter, roughly fixed per symbol
+      + equalizer_taps * 4             // LMS: filter (2x) + weight update (2x) per tap, if present
+      + decision_cost                  // a few compares; negligible next to the above
+    )
+    + fec_decode_cost_per_second       // amortized Viterbi/LDPC cost, computed separately
+
+// Compare against your MCU's available budget:
+available_cycles_per_second = cpu_clock_hz * fraction_of_cpu_time_available_for_this_task
+
+// A required/available ratio meaningfully above 1 means: reduce filter/equalizer taps,
+// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 3/6), or move to
+// dedicated radio silicon rather than software demodulation on the general MCU.

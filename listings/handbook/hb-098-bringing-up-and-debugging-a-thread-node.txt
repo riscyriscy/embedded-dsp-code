@@ -1,0 +1,19 @@
+Embedded DSP Handbook, Chapter 14: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Bringing up and debugging a Thread node
+Listing 99 of 119 (index 98, counting from 0 in book order), exactly as it appears in the book.
+Status: reference-only | Built as: (reference) | Checked by: OpenThread CLI command list; archived, not run here
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+dataset init new         # make a new dataset (first node only)
+dataset commit active    # store it as the active dataset
+ifconfig up              # bring up the IPv6 interface
+thread start             # start Thread and attach
+state                    # detached / child / router / leader
+ipaddr                   # list this node's IPv6 addresses
+router table             # ID, RLOC16, Next Hop, Path Cost, LQ In/Out
+child table              # attached children
+neighbor table           # directly reachable nodes
+parent                   # which router is this node's parent
+leaderdata               # partition ID, weighting, leader router ID
+counters mac             # MAC counters, for loss and retries
+ping <ipaddr>            # ICMPv6 echo to another node
+pollperiod               # read a SED's poll period (ms)

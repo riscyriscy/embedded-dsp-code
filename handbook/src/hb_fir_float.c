@@ -1,0 +1,48 @@
+/* Source: Embedded DSP Handbook, Chapter 1 (section 3, FIR Filters + "Exploiting symmetry for speed").
+ * Float FIR, FIR_TAPS = 32.  NOTE: Chapter 2 redefines FIR_TAPS (19, Q15) -- never include hb_fir_float.h and hb_fir_q15.h together. */
+#include "hb_fir_float.h"
+
+void fir_init(fir_filter_t *f, const float *coeffs) {
+    for (int i = 0; i < FIR_TAPS; i++) {
+        f->coeffs[i] = coeffs[i];
+        f->history[i] = 0.0f;
+    }
+    f->idx = 0;
+}
+
+float fir_process(fir_filter_t *f, float input) {
+    f->history[f->idx] = input;
+
+    float acc = 0.0f;
+    int idx = f->idx;
+    for (int i = 0; i < FIR_TAPS; i++) {
+        acc += f->coeffs[i] * f->history[idx];
+        idx = (idx == 0) ? FIR_TAPS - 1 : idx - 1;
+    }
+
+    f->idx = (f->idx + 1) % FIR_TAPS;
+    return acc;
+}
+
+// Symmetric (linear-phase) FIR: half the multiplies of the direct-form version above.
+// Valid only when coeffs[i] == coeffs[FIR_TAPS - 1 - i] for all i (a linear-phase design).
+float fir_process_symmetric(fir_filter_t *f, float input) {
+    f->history[f->idx] = input;
+
+    float acc = 0.0f;
+    int i_lo = f->idx;                     // walks newest -> older each step (age 0, 1, 2, ...)
+    int i_hi = (f->idx + 1) % FIR_TAPS;     // walks oldest -> newer each step (age N-1, N-2, ...)
+    for (int i = 0; i < FIR_TAPS / 2; i++) {
+        acc += f->coeffs[i] * (f->history[i_lo] + f->history[i_hi]);
+        i_lo = (i_lo == 0) ? FIR_TAPS - 1 : i_lo - 1;
+        i_hi = (i_hi == FIR_TAPS - 1) ? 0 : i_hi + 1;
+    }
+    if (FIR_TAPS % 2 == 1) {
+        // Odd tap count: the middle tap has no symmetric partner. After the loop above,
+        // i_lo has walked down to exactly the center sample's position; add it once, unpaired.
+        acc += f->coeffs[FIR_TAPS / 2] * f->history[i_lo];
+    }
+
+    f->idx = (f->idx + 1) % FIR_TAPS;
+    return acc;
+}

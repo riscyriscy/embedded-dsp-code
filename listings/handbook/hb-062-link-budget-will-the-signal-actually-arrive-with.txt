@@ -1,0 +1,13 @@
+Embedded DSP Handbook, Chapter 7: RF Front-End and Link Budget Basics / Link budget: will the signal actually arrive with enough SNR
+Listing 63 of 119 (index 62, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as:  | Checked by: formulas; FSPL 91.7 dB checked against (4*pi*d*f/c)^2, rx -77.7 dBm, SNR 43.3 dB (tests/test_C_ch7_link.c)
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+Received power (dBm) = Tx power (dBm)
+                       + Tx antenna gain (dBi)
+                       - path loss (dB)
+                       + Rx antenna gain (dBi)
+                       - cable/connector losses (dB)
+
+// Free-space path loss (line-of-sight, no obstructions):
+FSPL (dB) = 20*log10(distance_km) + 20*log10(freq_MHz) + 32.44
