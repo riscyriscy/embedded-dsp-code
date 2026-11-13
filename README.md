@@ -5,7 +5,7 @@ Companion code for two books by C. Paul Gordon (Embedded Think):
 - **The Embedded DSP Handbook**: `handbook/`
 - **The Embedded DSP Field Manual**: `field-manual/`
 
-Repository: `https://github.com/<your-github-user>/embedded-dsp-code` (replace `<your-github-user>` with your account name in this file and wherever the books refer to it).
+Repository: `https://github.com/riscyriscy/embedded-dsp-code`
 
 ## What is here
 
@@ -13,7 +13,7 @@ Every code listing in both books, extracted verbatim, split into headers and sou
 and independent references where that is possible. Nothing needs hardware.
 
 ```
-git clone https://github.com/<your-github-user>/embedded-dsp-code
+git clone https://github.com/riscyriscy/embedded-dsp-code
 cd embedded-dsp-code
 make -C field-manual test     # 7 test programs
 make -C handbook test         # 49 test programs
