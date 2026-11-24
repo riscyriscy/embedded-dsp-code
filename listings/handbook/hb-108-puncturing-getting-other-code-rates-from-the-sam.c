@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Puncturing: getting other code rates from the same K=7 encoder
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Puncturing: getting other code rates from the same K=7 encoder
  * Listing 109 of 119 (index 108, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: pattern == 802.11 3/4 (A0 B0 A1 B2), counts, de-puncture symmetry and canary no-overread, 1333-byte prose arithmetic, rate-3/4 end-to-end decode
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

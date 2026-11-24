@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / A fixed-point biquad: the problem with Q1.15 coefficients
- * Listing 25 of 119 (index 24, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / A fixed-point biquad: the problem with Q1.15 coefficients
+ * Listing 25 of 119 (index 24, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_biquad_q15.h src/hb_biquad_q15.c tests/shims/hbA_biquad_q15_trunc.h | Checked by: tests/test_A_biquad_q15.c (33 checks): quantised coefficients and golden impulse response; vs double DF1; level-dependent error of the 1 + a1 + a2 term
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), q2_14_mul_round and biquad_process_q15 are replaced by a comment that points to Field Manual listing fm-012. The text below is the full listing, kept so the compiled module still matches it.
  */
 #define Q2_14_SHIFT 14
 // Q2.14: same idea as Chapter 1's Q15_SHIFT/FLOAT_TO_Q15, one bit of integer range traded for
@@ -11,7 +12,7 @@
 #define FLOAT_TO_Q2_14(f) ((int16_t)lrintf(fmaxf(-32768.0f, fminf((f) * (1 << Q2_14_SHIFT), 32767.0f))))
 
 // Q2.14 coefficient x Q1.15 sample -> Q1.15-scaled product, ROUNDED rather than truncated.
-// Chapter 1 already establishes why (q15_mul_trunc vs. q15_mul_round, in the limit-cycle
+// Chapter 2 already establishes why (q15_mul_trunc vs. q15_mul_round, in the limit-cycle
 // discussion): a one-directional truncation bias doesn't average out, and in a feedback path
 // specifically, that bias gets divided by (1 + a1 + a2), which is small by construction for
 // any lowpass or bandpass design. For a narrowband section that denominator can be very small,

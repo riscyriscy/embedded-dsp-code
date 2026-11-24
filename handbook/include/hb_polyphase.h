@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (Decimation: reducing the sample rate), polyphase.
+/* Source: Embedded DSP Handbook, Chapter 8 (Decimation: reducing the sample rate), polyphase.
  * Code from the Embedded DSP Handbook; MIT License.
  * Polyphase decimate-by-M (POLY_M = 4, 8 taps per phase) and the coefficient loader polyphase_init(). */
 #ifndef HB_POLYPHASE_H

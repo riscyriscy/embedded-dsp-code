@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
  * Listing 72 of 119 (index 71, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_farrow.h src/hb_farrow.c | Checked by: tests/test_C_ch8_interp.c (exact on cubics, vs sine, used as interpolator in the closed-loop timing test)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

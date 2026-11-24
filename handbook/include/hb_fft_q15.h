@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 4 (A Q15 butterfly, worked).
+/* Source: Embedded DSP Handbook, Chapter 7 (A Q15 butterfly, worked).
  * Code from the Embedded DSP Handbook; MIT License.
  * Q15 saturate, complex multiply and radix-2 butterfly (shift right by 1 per stage). Header-only (static inline).
  * No Q15 FFT driver here; the tests use their own harness driver. */

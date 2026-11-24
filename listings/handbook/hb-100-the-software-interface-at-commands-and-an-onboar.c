@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 15: Cellular IoT Connectivity / The software interface: AT commands and an onboard IP stack
+ * Embedded DSP Handbook, Chapter 18: Cellular IoT Connectivity / The software interface: AT commands and an onboard IP stack
  * Listing 101 of 119 (index 100, counting from 0 in book order), exactly as it appears in the book.
  * Status: reference-only | Built as: reference/hbD_100_at_command_sequence.txt | Checked by: AT commands for a cellular module (not C, module-specific); archived
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

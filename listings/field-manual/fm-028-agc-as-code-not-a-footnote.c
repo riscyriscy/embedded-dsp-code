@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / AGC: as code, not a footnote
- * Listing 29 of 57 (index 28, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 29 of 61 (index 28, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_agc.h src/fm_agc.c | Checked by: tests/test_nco_qpsk.c (step units); closed loop: tests/test_chain.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

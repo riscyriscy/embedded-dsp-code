@@ -1,5 +1,5 @@
-/* Chapter 8: matched filtering (HB[69]).  The two calls (tests/shims/hb_C_snippet_69.inc, verbatim) run
- * a Q15 FIR (the Chapter 2 fir_process_q15, FIR_TAPS = 19) as an RRC matched filter on I and Q.
+/* Chapter 11: matched filtering (HB[69]).  The two calls (tests/shims/hb_C_snippet_69.inc, verbatim) run
+ * a Q15 FIR (the Chapter 5 fir_process_q15, FIR_TAPS = 19) as an RRC matched filter on I and Q.
  * The taps here are generated in the test from the closed-form RRC impulse response
  * (alpha = 0.35, 2 samples/symbol, 19 taps) and quantised to Q15 -- an independent reference.
  * Claims tested: the call computes the Q15 convolution (double reference), and TX-RRC followed by this RX-RRC is ISI-free at

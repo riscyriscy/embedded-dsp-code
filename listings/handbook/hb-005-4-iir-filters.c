@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / 4. IIR Filters
+ * Embedded DSP Handbook, Chapter 2: FIR and IIR Filters / 2. IIR Filters
  * Listing 6 of 119 (index 5, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_filters.h src/hb_filters.c | Checked by: tests/test_A_filters.c (64 checks): DF2T biquad vs double DF1, DC gain, stability
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

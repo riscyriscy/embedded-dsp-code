@@ -1,4 +1,4 @@
-# Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
+# Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
 # Listing 21 of 119 (index 20, counting from 0 in book order), exactly as it appears in the book.
 # Status: not-code | Built as: tools/design_filter.py | Checked by: Python tool (verbatim, foundation); regeneration verified by tools/hbA_check_coeffs.py: output identical to include/generated/coeffs.h and to the values in HB[21]
 # MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

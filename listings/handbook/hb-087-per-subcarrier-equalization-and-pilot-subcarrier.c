@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 10: OFDM and Multicarrier Modulation / Per-subcarrier equalization and pilot subcarriers
+ * Embedded DSP Handbook, Chapter 13: OFDM and Multicarrier Modulation / Per-subcarrier equalization and pilot subcarriers
  * Listing 88 of 119 (index 87, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_ofdm.c include/hb_ofdm.h | Checked by: tests/test_D_ofdm.c: exact for linear channel, == linear interpolation of true pilot gains, tail subcarriers covered
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

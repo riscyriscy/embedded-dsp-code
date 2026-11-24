@@ -1,4 +1,4 @@
-/* Chapter 6, "The NCO in detail": the one-cosine-table NCO with optional linear interpolation (examples/nco_demo.c).
+/* Chapter 9, "The NCO in detail": the one-cosine-table NCO with optional linear interpolation (examples/nco_demo.c).
  * Checks the numbers the book quotes: worst error against double-precision sin/cos over 10^6 phases (256 entries,
  * interpolated: 4.05 LSB), quarter-turn wrap, sin(x) = cos(x - 90 deg), and the frequency-quantization figures
  * for 1000 Hz at 48 kHz. The SFDR figures come from tools/nco_measure.py (needs numpy), not from this test. */

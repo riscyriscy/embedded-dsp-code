@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (2. Symbol timing recovery: finding when to sample).
+/* Source: Embedded DSP Handbook, Chapter 11 (2. Symbol timing recovery: finding when to sample).
  * gardner_ted_t, gardner_error(), timing_interpolate_linear().  MIT License. */
 #ifndef HB_TIMING_H
 #define HB_TIMING_H

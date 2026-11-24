@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / Exporting the RRC taps: design_rrc.py
- * Listing 31 of 57 (index 30, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 31 of 61 (index 30, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/generated/rrc_coeffs.h | Checked by: generated; values asserted in tests/test_vectors.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

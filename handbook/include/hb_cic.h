@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (CIC filters; Bit growth: sizing the accumulator; PDM microphones).
+/* Source: Embedded DSP Handbook, Chapter 8 (CIC filters; Bit growth: sizing the accumulator; PDM microphones).
  * Code from the Embedded DSP Handbook; MIT License.
  * Integrator/comb stages, order-3 decimator, growth-bits rescale and the PDM front end (listings 39, 41, 42 in one unit).
  * Register growth of an order-N CIC decimating by M (HB[42]):

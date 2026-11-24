@@ -1,5 +1,5 @@
 # Embedded DSP Field Manual, Chapter 2: Filters You Ship / FIR: convolution, sized and generated
-# Listing 8 of 57 (index 7, counting from 0 in book order), exactly as it appears in the book.
+# Listing 8 of 61 (index 7, counting from 0 in book order), exactly as it appears in the book.
 # Status: not-code | Built as: tools/design_filter.py | Checked by: Python tool; regeneration checked by `make check-generated`
 # MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 # design_filter.py - run once offline, whenever the filter spec changes

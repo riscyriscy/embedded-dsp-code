@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 6 (Using the CORDIC for exact phase/magnitude, STM32 "Phase" function).
+/* Source: Embedded DSP Handbook, Chapter 9 (Using the CORDIC for exact phase/magnitude, STM32 "Phase" function).
  * Code from the Embedded DSP Handbook; MIT License.
  * REFERENCE ONLY (ST HAL driver calls, hardware peripheral): archived, never compiled. */
 

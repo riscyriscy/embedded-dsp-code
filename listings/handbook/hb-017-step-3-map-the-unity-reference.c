@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Step 3: Map the “unity” reference
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Step 3: Map the "unity" reference
  * Listing 18 of 119 (index 17, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_adc_q15.h src/hb_adc_q15.c | Checked by: tests/test_A_adc_dequant.c (23 checks): all 4096 codes vs (adc-2048)*16; shift 3 vs 4 (6 dB); no left shift of a negative value
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

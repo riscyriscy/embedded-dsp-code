@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / QPSK: mapping and the decision rule
- * Listing 27 of 57 (index 26, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 27 of 61 (index 26, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_qpsk.h src/fm_qpsk.c | Checked by: tests/test_nco_qpsk.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

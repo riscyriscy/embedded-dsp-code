@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 3 (The IIR case).
+/* Source: Embedded DSP Handbook, Chapter 6 (The IIR case).
  * MIT License.
  * Listing HB[29]; reference only (STM32 HAL FMAC delta for IIR).  NOT built. */
 // Delta from the FIR sFmacConfig above - same struct, these five fields change for IIR:

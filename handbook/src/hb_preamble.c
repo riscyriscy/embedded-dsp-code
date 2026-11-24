@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (Preamble acquisition: finding the packet before locking onto anything).
+/* Source: Embedded DSP Handbook, Chapter 11 (Preamble acquisition: finding the packet before locking onto anything).
  * preamble_corr_t, preamble_correlate().  MIT License. */
 #include "hb_preamble.h"
 

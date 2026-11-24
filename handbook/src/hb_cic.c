@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (CIC filters; Bit growth: sizing the accumulator; PDM microphones).
+/* Source: Embedded DSP Handbook, Chapter 8 (CIC filters; Bit growth: sizing the accumulator; PDM microphones).
  * Code from the Embedded DSP Handbook; MIT License.
  * Integrator/comb stages, order-3 decimator, growth-bits rescale and the PDM front end (listings 39, 41, 42 in one unit).
  * Host build: cic_growth_bits() is file-static, so it lives in this file. */
@@ -17,7 +17,7 @@ uint64_t cic_comb_step(cic_comb_t *s, uint64_t input) {
 
 // A decimate-by-M, order-N CIC: N integrators at input rate, decimate by M, N combs at output rate.
 // (Shown conceptually for N=3; in practice you'd loop over an array of stage structs.)
-// Returns bool + out-parameter, the same fix Chapter 5's FIR decimator needed: a sentinel
+// Returns bool + out-parameter, the same fix Chapter 8's FIR decimator needed: a sentinel
 // return value is easy for a careless caller to mistake for real data.
 //
 // decim_counter is passed BY VALUE and this function never increments it: the CALLER owns

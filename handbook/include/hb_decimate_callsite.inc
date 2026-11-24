@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (Decimation: reducing the sample rate), call-site snippet.
+/* Source: Embedded DSP Handbook, Chapter 8 (Decimation: reducing the sample rate), call-site snippet.
  * Code from the Embedded DSP Handbook; MIT License.
  * SYNTAX-ONLY: statements, not a function. It needs f, adc_samples, DECIM_FACTOR, num_input_samples and output_buffer to be
  * defined by the surrounding code; tests/test_B_decimate.c includes it inside a harness function that supplies them. */

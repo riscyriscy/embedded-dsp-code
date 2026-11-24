@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 2: Filters You Ship / The Q2.14 biquad, and why Q15 coefficients don't work
- * Listing 13 of 57 (index 12, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 13 of 61 (index 12, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_biquad.h src/fm_biquad.c | Checked by: tests/test_filters.c, tests/test_vectors.c (printed 8-sample vector)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

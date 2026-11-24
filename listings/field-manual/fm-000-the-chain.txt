@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, The Chain
-Listing 1 of 57 (index 0, counting from 0 in book order), exactly as it appears in the book.
+Listing 1 of 61 (index 0, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (diagram) | Checked by: signal-chain overview, text in a code block
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

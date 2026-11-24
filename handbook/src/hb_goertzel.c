@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (The Goertzel algorithm and the sliding DFT).
+/* Source: Embedded DSP Handbook, Chapter 3 (The Goertzel algorithm and the sliding DFT).
  * MIT License. */
 #include "hb_goertzel.h"
 

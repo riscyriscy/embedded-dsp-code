@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
  * Listing 24 of 119 (index 23, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: reference/hb_fir_q15_usage_snippet.inc | Checked by: usage snippet: fir_init_q15(...) is a statement at file scope in the book (not valid C there); verbatim .inc run inside a harness in tests/test_A_fir_q15.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

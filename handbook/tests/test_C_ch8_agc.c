@@ -1,4 +1,4 @@
-/* Chapter 8: AGC (HB[67]).
+/* Chapter 11: AGC (HB[67]).
  * What is checked, against independent references:
  *   - agc_update() step = gain * |error| / (2 * target) / 2^shift (rounded to nearest, double-precision reference), the
  *     symmetric deadband the comments describe, the clamps [1, 16*32768], agc_apply() = floor(sample*gain/2^15).

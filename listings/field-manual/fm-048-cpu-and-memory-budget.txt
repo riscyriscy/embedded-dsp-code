@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, Chapter 9: FEC and the CPU Budget / CPU and memory budget
-Listing 49 of 57 (index 48, counting from 0 in book order), exactly as it appears in the book.
+Listing 49 of 61 (index 48, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (worked example) | Checked by: CPU budget numbers
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

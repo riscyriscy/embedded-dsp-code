@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (Lab 0: one known tone, start to finish).
+/* Source: Embedded DSP Handbook, Chapter 4 (Lab 0: one known tone, start to finish).
  * MIT License.
  * dc_blocker_t / one_pole_lpf_t come from hb_filters.h (HB[8]); arm_math.h is CMSIS-DSP on a target and
  * tests/shims/hbA_arm_math.h (naive DFT with the CMSIS packed layout) in the host build (-DHB_HOST_TEST).
@@ -15,7 +15,7 @@
 
 #define LAB0_N 256   // one block, one FFT's worth; the DMA pattern above used 128 for its example
 
-static dc_blocker_t   lab0_dcb = { .r_q15 = 32604 };       // R = 0.995, this chapter's DC blocker
+static dc_blocker_t   lab0_dcb = { .r_q15 = 32604 };       // R = 0.995, Chapter 2's DC blocker
 static one_pole_lpf_t lab0_lpf = { .alpha_q15 = 25956 };   // -3 dB at ~2.7 kHz (fs = 8 kHz)
 static float lab0_window[LAB0_N];                          // Hann, computed once at init
 static float lab0_buf[LAB0_N];

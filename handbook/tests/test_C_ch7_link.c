@@ -1,4 +1,4 @@
-/* Chapter 7: Friis cascade, noise floor, FSPL, link_budget_margin_db(), IM3.
+/* Chapter 10: Friis cascade, noise floor, FSPL, link_budget_margin_db(), IM3.
  * HB[63] is the only C listing; HB[60],[61],[62],[65] are formulas and HB[64] is the worked call-site.  Every number in the
  * chapter is re-derived here from independent physics (kTB from Boltzmann's constant, FSPL from (4*pi*d*f/c)^2,
  * a noise-temperature cascade, a two-tone cubic-nonlinearity simulation for IM3). */

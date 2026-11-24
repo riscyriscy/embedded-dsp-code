@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 6 (section 3, FM demodulation via I/Q).
+/* Source: Embedded DSP Handbook, Chapter 9 (section 3, FM demodulation via I/Q).
  * Quadrature FM discriminator (cross product, no atan2). */
 #ifndef HB_FM_DEMOD_H
 #define HB_FM_DEMOD_H

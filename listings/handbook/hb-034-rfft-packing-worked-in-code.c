@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / RFFT packing, worked in code
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / RFFT packing, worked in code
  * Listing 35 of 119 (index 34, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_rfft_pack.c include/hb_rfft_pack.h | Checked by: tests/test_B_rfft_pack.c: pack + fft + unpack vs two naive DFTs N=4..512, known answers
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
@@ -14,7 +14,7 @@ void rfft_pack(const float *a, const float *b, complex_t *packed, int N) {
     }
 }
 
-// After running the ordinary complex FFT (Chapter 4's fft()) on 'packed', unpack the two real
+// After running the ordinary complex FFT (Chapter 7's fft()) on 'packed', unpack the two real
 // spectra A[k] and B[k] from the combined result Z[k], using conjugate symmetry:
 //   A[k] = (Z[k] + conj(Z[N-k])) / 2
 //   B[k] = (Z[k] - conj(Z[N-k])) / (2j)

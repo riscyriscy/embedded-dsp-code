@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / Butterfly arithmetic
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / Butterfly arithmetic
  * Listing 32 of 119 (index 31, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_complex.h | Checked by: tests/test_B_complex.c: cmul vs double _Complex, butterfly invariants, exact W=1 / W=-j cases
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

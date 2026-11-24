@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 9 (Differential PSK: sidestepping the ambiguity instead of detecting it).
+/* Source: Embedded DSP Handbook, Chapter 12 (Differential PSK: sidestepping the ambiguity instead of detecting it).
  * dqpsk_decoder_t, dqpsk_decode_symbol().  MIT License.
  * Host build: -std=c11 -Wpedantic has no binary literals, so the 2-bit codes are written in hex (binary in the comment). */
 #include "hb_dqpsk.h"
@@ -13,7 +13,7 @@ uint8_t dqpsk_decode_symbol(dqpsk_decoder_t *d, int32_t curr_phase_q31) {
 
     // Quantize the wrapped phase difference (Q31, representing angle/pi from -1.0 to +1.0)
     // to the nearest of the four 90-degree steps, using the same counterclockwise Gray ring
-    // from Chapter 6's QPSK table: 0 -> +90 -> 180 -> -90 -> back to 0, each step one bit flip.
+    // from Chapter 9's QPSK table: 0 -> +90 -> 180 -> -90 -> back to 0, each step one bit flip.
     const int32_t QUARTER = 0x40000000;  // +90 degrees in Q31 (angle/pi = 0.5)
     const int32_t EIGHTH  = QUARTER / 2; // +45 degrees, the decision boundary between bins
     if (phase_diff > -EIGHTH && phase_diff <= EIGHTH) {

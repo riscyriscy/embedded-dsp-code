@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (3. Carrier recovery: a Costas loop).
+/* Source: Embedded DSP Handbook, Chapter 11 (3. Carrier recovery: a Costas loop).
  * costas_phase_error(), costas_loop_t, costas_update(), costas_apply_correction() (uses nco_t from hb_nco.h).
  * MIT License. */
 #ifndef HB_COSTAS_H

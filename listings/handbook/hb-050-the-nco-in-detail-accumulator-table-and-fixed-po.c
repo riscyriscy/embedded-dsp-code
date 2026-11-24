@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / The NCO in detail: accumulator, table, and fixed-point limits
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / The NCO in detail: accumulator, table, and fixed-point limits
  * Listing 51 of 119 (index 50, counting from 0 in book order), exactly as it appears in the book.
  * Status: compiled | Built as: examples/nco_demo.c | Checked by: builds clean at TBL_BITS 6, 8, 10 and 12; measured by tools/nco_measure.py (the table in HB[51]); the listing is nco_cos and nco_sin from nco_demo.c with the comments shortened and tbl_init left out; not part of make test
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

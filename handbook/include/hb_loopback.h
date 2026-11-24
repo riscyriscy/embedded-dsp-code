@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 19 ("One complete loopback chain, wired end to end").
+/* Source: Embedded DSP Handbook, Chapter 22 ("One complete loopback chain, wired end to end").
  * Complete digital-loopback QPSK receiver (AGC -> mixer -> RRC -> Gardner -> Costas -> slicer -> BER).
  * MIT License. */
 #ifndef HB_LOOPBACK_H
@@ -16,15 +16,15 @@
 #include "hb_qpsk.h"
 
 #define GARDNER_ONLY_SYMBOLS 40   // symbols of Gardner-only acquisition before the Costas loop comes
-                                   // online - Chapter 9's own staged-acquisition guidance: let timing
+                                   // online - Chapter 12's own staged-acquisition guidance: let timing
                                    // recovery converge first, then layer the (narrower) carrier loop
                                    // on top, rather than adapting both loops from sample 1.
 
 typedef struct {
     agc_t          agc;
     nco_t          nco;
-    fir_q15_t      rrc_i, rrc_q;           // matched filter state, one per rail (Chapter 8, section 1) -
-                                           // fir_q15_t, not Chapter 1's float fir_filter_t: everything in
+    fir_q15_t      rrc_i, rrc_q;           // matched filter state, one per rail (Chapter 11, section 1) -
+                                           // fir_q15_t, not Chapter 2's float fir_filter_t: everything in
                                            // this loopback runs fixed-point, mixer output included
     int32_t        hist_i[2], hist_q[2];  // most recent matched-filter outputs per rail:
                                            // [0] = mid-symbol sample, [1] = decision sample. At the

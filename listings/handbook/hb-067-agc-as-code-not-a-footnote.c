@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / AGC: as code, not a footnote
- * Listing 68 of 119 (index 67, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / AGC: as code, not a footnote
+ * Listing 68 of 119 (index 67, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_agc.h src/hb_agc.c | Checked by: tests/test_C_ch8_agc.c: closed-loop settling to the attack/release balance point, step sizes, rails, clamp
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), agc_apply is replaced by a comment that points to Field Manual listing fm-028. The text below is the full listing, kept so the compiled module still matches it.
  */
 typedef struct {
     int32_t gain_q15;       // current gain; this container is a wide int32_t, not a packed

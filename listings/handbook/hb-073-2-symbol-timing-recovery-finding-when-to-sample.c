@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
  * Listing 74 of 119 (index 73, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_timing_loop.h src/hb_timing_loop.c | Checked by: tests/test_C_ch8_timing.c: negative feedback, 64-bit products, clock-offset tracking +-1000 ppm
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

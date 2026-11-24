@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 (Step 6: Choose accumulator width for MACs).
+/* Source: Embedded DSP Handbook, Chapter 5 (Step 6: Choose accumulator width for MACs).
  * MIT License.
  * HB[19], call-site snippet: coeffs[] and history[] are not declared in the book, and "int64_t acc" is a statement sequence,
  * not a function.  Included verbatim inside a harness function by tests/test_A_fir_q15.c. */

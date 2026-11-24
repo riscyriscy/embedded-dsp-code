@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Fixed-point or floating-point NCO: advantages and caveats
+Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / Fixed-point or floating-point NCO: advantages and caveats
 Listing 53 of 119 (index 52, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (output) | Checked by: output of examples/nco_fixed_vs_float.c, reproduced exactly by building and running it
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

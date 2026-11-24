@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / I and Q waveforms for BPSK, QPSK, 16-QAM and GFSK
-Listing 28 of 57 (index 27, counting from 0 in book order), exactly as it appears in the book.
+Listing 28 of 61 (index 27, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: ../handbook/tools/iq_waveforms.py | Checked by: output of tools/iq_waveforms.py in the Handbook repository directory (needs numpy and matplotlib), reproduced exactly; the same block is HB[57]
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

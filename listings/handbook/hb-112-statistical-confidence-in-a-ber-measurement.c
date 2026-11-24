@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / Statistical confidence in a BER measurement
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / Statistical confidence in a BER measurement
  * Listing 113 of 119 (index 112, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_testkit.c include/hb_testkit.h | Checked by: tests/test_D_testkit.c: book example 1e7 bits exact, rounding up for round targets
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

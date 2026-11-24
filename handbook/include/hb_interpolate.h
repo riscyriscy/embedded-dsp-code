@@ -1,6 +1,6 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (Interpolation: increasing the sample rate).
+/* Source: Embedded DSP Handbook, Chapter 8 (Interpolation: increasing the sample rate).
  * Code from the Embedded DSP Handbook; MIT License.
- * Zero-stuff by L and filter with Chapter 2's fir_q15_t (FIR_TAPS = 19). Never link together with hb_fir_float / hb_decimate. */
+ * Zero-stuff by L and filter with Chapter 5's fir_q15_t (FIR_TAPS = 19). Never link together with hb_fir_float / hb_decimate. */
 #ifndef HB_INTERPOLATE_H
 #define HB_INTERPOLATE_H
 

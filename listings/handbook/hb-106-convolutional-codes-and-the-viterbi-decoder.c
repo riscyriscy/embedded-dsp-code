@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Convolutional codes and the Viterbi decoder
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Convolutional codes and the Viterbi decoder
  * Listing 107 of 119 (index 106, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: ACS driven by a streaming harness (clean, 9 isolated errors, 3 in one constraint length, soft vs hard constructed case), traceback window oldest-first after wraps, 2240-byte traceback; N-D6 path-metric growth
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

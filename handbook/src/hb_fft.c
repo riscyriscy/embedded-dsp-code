@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 4 (How it becomes the whole FFT).
+/* Source: Embedded DSP Handbook, Chapter 7 (How it becomes the whole FFT).
  * Iterative radix-2 float FFT (bit_reverse_permute + fft). Uses cosf/sinf per butterfly. */
 #include "hb_fft.h"
 

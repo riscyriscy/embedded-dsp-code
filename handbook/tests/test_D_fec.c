@@ -1,4 +1,4 @@
-/* Chapter 18 (FEC), HB[103]..HB[110]: soft LLRs, the rate-1/2 K=7 convolutional encoder, Viterbi ACS / branch metrics / traceback,
+/* Chapter 21 (FEC), HB[103]..HB[110]: soft LLRs, the rate-1/2 K=7 convolutional encoder, Viterbi ACS / branch metrics / traceback,
  * rate-3/4 puncturing, block interleaver, GF(2^8) tables and multiply (src/hb_fec.c).
  *
  * The chapter lists the pieces of a Viterbi decoder but no driver.  The driver below (HARNESS, written here) is the
@@ -208,7 +208,7 @@ int main(void) {
         memcpy(g_rx, g_c, sizeof g_rx); hard_llrs(g_rx);
         CHECK(msg_errors(build_branch_metrics) == 0, "clean channel decodes exactly (499 message bits, depth %d)", MAX_TRACEBACK_DEPTH);
         /* depth sanity (prose): sizeof traceback buffer = 64 x 35 = 2240, "2240 traceback entries alone" */
-        CHECK(sizeof V.traceback == 2240 && MAX_TRACEBACK_DEPTH == 35, "traceback buffer is %zu entries (prose Chapter 17: 64 x 35 = 2240)", sizeof V.traceback);
+        CHECK(sizeof V.traceback == 2240 && MAX_TRACEBACK_DEPTH == 35, "traceback buffer is %zu entries (prose Chapter 20: 64 x 35 = 2240)", sizeof V.traceback);
         /* isolated channel errors, >= 40 coded bits apart (free distance 10: each is individually correctable) */
         static const int flips[] = { 30, 111, 210, 333, 480, 602, 721, 850, 960 };
         memcpy(g_rx, g_c, sizeof g_rx); for (unsigned i = 0; i < sizeof flips / sizeof *flips; i++) g_rx[flips[i]] ^= 1;

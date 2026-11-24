@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 13: Bluetooth and BLE: What the Module Is Doing / CRC and whitening: two packet-processing steps easy to conflate
+ * Embedded DSP Handbook, Chapter 16: Bluetooth and BLE: What the Module Is Doing / CRC and whitening: two packet-processing steps easy to conflate
  * Listing 97 of 119 (index 96, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_ble.c include/hb_ble.h | Checked by: tests/test_D_ble.c: CRC vs catalogue check values 29B1/31C3, binascii.crc_hqx vectors, bit-by-bit division, residue 0; whitening vs the spec register written two ways (channel 37: 8D D2 57 A1), self-inverse
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

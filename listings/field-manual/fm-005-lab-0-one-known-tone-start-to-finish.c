@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 1: Sampling, Q-Format, and DMA / Lab 0: one known tone, start to finish
- * Listing 6 of 57 (index 5, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 6 of 61 (index 5, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: examples/lab0.c | Checked by: tests/test_lab0.c (peak bin 32 at 1 kHz, against a naive-DFT arm_math.h shim)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 11 (Spread Spectrum), HB[91] 4-bit LFSR PN generator + spread/despread, HB[92] early-late DLL error.
+/* Source: Embedded DSP Handbook, Chapter 14 (Spread Spectrum), HB[91] 4-bit LFSR PN generator + spread/despread, HB[92] early-late DLL error.
  * MIT License.
  * Host build: <stdint.h> is included. */
 #include "hb_dsss.h"
@@ -39,5 +39,5 @@ int32_t dll_chip_error(const int8_t *early_corr_chips, const int8_t *late_corr_c
         early_energy += early_corr_chips[i] * pn_sequence[i];
         late_energy  += late_corr_chips[i]  * pn_sequence[i];
     }
-    return early_energy - late_energy;  // feeds the same style of loop filter as Chapter 9
+    return early_energy - late_energy;  // feeds the same style of loop filter as Chapter 12
 }

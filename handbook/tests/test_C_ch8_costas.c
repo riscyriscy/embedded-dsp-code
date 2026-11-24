@@ -1,4 +1,4 @@
-/* Chapter 8: QPSK Costas loop (HB[74]) wired to the repo's real NCO / quadrature mixer, closed loop.
+/* Chapter 11: QPSK Costas loop (HB[74]) wired to the repo's real NCO / quadrature mixer, closed loop.
  *
  * Fixture (independent of the code under test): passband QPSK, constellation at +-45/135 degrees (the points sign(I)*Q - sign(Q)*I
  * is zero on), rectangular symbols of 8 samples, carrier fs/4 + offset, amplitude 16384, carrier phase phase0.  The receiver is
@@ -139,7 +139,7 @@ int main(void) {
       printf("  [info] real (sign-detector) Costas loop, 1%% offset: freq within 5%% of ideal and staying there from symbol %d (linear-model prediction: 78)\n", b.settle5);
       CHECK(b.settle5 > 78 && b.settle5 < 250, "settling symbol %d", b.settle5); }
 
-    /* Chapter 9 prose, "Pull-in range vs. pull-in time": a Bn*T = 0.02 loop pulls in offsets of about 1 to 1.5 x Bn (Bn = 768 Hz on a
+    /* Chapter 12 prose, "Pull-in range vs. pull-in time": a Bn*T = 0.02 loop pulls in offsets of about 1 to 1.5 x Bn (Bn = 768 Hz on a
      * 38.4 kbaud link, i.e. 0.02 .. 0.03 cycles/symbol).  Measured on the real (sign-detector) loop: */
     {
         const double ds[] = { 0.01, 0.02, 0.03, 0.06, 0.1, 0.2 }; double last_lock = 0, first_fail = 1e9;

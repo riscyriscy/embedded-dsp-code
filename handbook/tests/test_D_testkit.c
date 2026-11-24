@@ -1,4 +1,4 @@
-/* Chapter 19 (Test and Validation), HB[111]..HB[116] (src/hb_testkit.c).
+/* Chapter 22 (Test and Validation), HB[111]..HB[116] (src/hb_testkit.c).
  * HB[117]/[118] (the complete loopback chain) are tested separately by the coordinator.
  * References: closed forms (EVM of known-size error vectors; EVM of AWGN = sqrt(noise power / signal power)); text captured from the
  * UART-dump functions by redirecting stdout and parsed back; sizing arithmetic done in exact integer/long double terms. */

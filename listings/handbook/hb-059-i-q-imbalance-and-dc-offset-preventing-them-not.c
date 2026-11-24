@@ -1,10 +1,10 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / I/Q imbalance and DC offset: preventing them, not just diagnosing them
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / I/Q imbalance and DC offset: preventing them, not just diagnosing them
  * Listing 60 of 119 (index 59, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_iq_correct.c include/hb_iq_correct.h | Checked by: tests/test_B_iq_correct.c: DC blocker per rail vs closed form, imbalance matrix vs explicit impairment model, image rejection before/after
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
-// DC offset: reuse Chapter 1's DC blocker, applied independently to the I and Q rails right
+// DC offset: reuse Chapter 2's DC blocker, applied independently to the I and Q rails right
 // after the quadrature mixer, before anything else touches the samples.
 typedef struct { dc_blocker_t i_blocker, q_blocker; } iq_dc_corrector_t;
 

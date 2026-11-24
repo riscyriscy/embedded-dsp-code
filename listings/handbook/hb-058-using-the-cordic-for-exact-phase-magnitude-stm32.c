@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Using the CORDIC for exact phase/magnitude (STM32 “Phase” function)
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / Using the CORDIC for exact phase/magnitude (STM32 "Phase" function)
  * Listing 59 of 119 (index 58, counting from 0 in book order), exactly as it appears in the book.
  * Status: reference-only | Built as: src/hb_cordic_hal_ref.c.txt | Checked by: ST HAL calls on a hardware peripheral; archived verbatim, not built
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

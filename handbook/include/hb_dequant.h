@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 (A different fixed-point convention: TinyML and CMSIS-NN int8).
+/* Source: Embedded DSP Handbook, Chapter 5 (A different fixed-point convention: TinyML and CMSIS-NN int8).
  * MIT License. */
 #ifndef HB_DEQUANT_H
 #define HB_DEQUANT_H

@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / The full digital demodulation chain
+Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / The full digital demodulation chain
 Listing 67 of 119 (index 66, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as:  | Checked by: block diagram in text
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

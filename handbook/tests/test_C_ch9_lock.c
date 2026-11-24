@@ -1,4 +1,4 @@
-/* Chapter 9: lock detector (HB[81]).
+/* Chapter 12: lock detector (HB[81]).
  * d->locked flips only after lock_dwell_target (unlock_dwell_target) CONSECUTIVE samples on that side; the average is an
  * exponential average of |error| (alpha = 1/16) that carries 4 extra fraction bits so no step is lost to flooring.
  * Independent references: a double-precision exponential average of |e|, and the dwell semantics counted directly in the test. */

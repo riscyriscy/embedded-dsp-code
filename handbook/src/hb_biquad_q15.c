@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 (A fixed-point biquad: why Q1.15 coefficients don't work).
+/* Source: Embedded DSP Handbook, Chapter 5 (A fixed-point biquad: why Q1.15 coefficients don't work).
  * Q2.14 biquad, DF2T, wide state. */
 #include "hb_biquad_q15.h"
 

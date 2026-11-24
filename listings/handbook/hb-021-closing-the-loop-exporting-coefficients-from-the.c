@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
  * Listing 22 of 119 (index 21, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/generated/coeffs.h | Checked by: tests/test_A_fir_q15.c: equals the listed values, symmetric, equals round(32768*remez taps), 40 dB stopband / +-0.054 dB passband of the quantised set
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

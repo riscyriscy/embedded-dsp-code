@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Step 6: Choose accumulator width for MACs
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Step 6: Choose accumulator width for MACs
  * Listing 20 of 119 (index 19, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: reference/hb_acc_snippet.inc | Checked by: call-site snippet (coeffs/history undeclared); verbatim .inc included in a harness in tests/test_A_fir_q15.c; an int32 accumulator suffices for the 19-tap design (sum|h| = 1.48)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

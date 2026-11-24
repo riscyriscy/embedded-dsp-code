@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 6 (Transmit side: QPSK symbol mapping; Receive side: symbol recovery and decision).
+/* Source: Embedded DSP Handbook, Chapter 9 (Transmit side: QPSK symbol mapping; Receive side: symbol recovery and decision).
  * Code from the Embedded DSP Handbook; MIT License.
  * Host build: quadrature_upconvert() is static inline because it indexes hb_nco.h's file-static cos_table/sin_table;
  * an out-of-line copy would see its own, never-initialised tables. Call nco_table_init() first. */

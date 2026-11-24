@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""gen_farrow_weights.py -- generates the Q15 Lagrange weight table that Chapter 8 describes as produced offline.
+"""gen_farrow_weights.py -- generates the Q15 Lagrange weight table that Chapter 11 describes as produced offline.
 
 Writes include/generated/farrow_weights.h: the Q15 table `farrow_weights_q15[FARROW_MU_STEPS][4]` that the Handbook's
 timing_interpolate_farrow_cubic_q15() declares `extern`.
@@ -9,7 +9,7 @@ timing_interpolate_farrow_cubic() uses:
     p_m1 = -mu (mu-1)(mu-2)/6      p_0 = (mu+1)(mu-1)(mu-2)/2
     p_1  = -(mu+1) mu (mu-2)/2     p_2 = (mu+1) mu (mu-1)/6
 Rounding is to nearest; the only value that does not fit int16 Q15 is p_0(mu=0) = 1.0 (= 32768), which saturates to 32767
-(a one-LSB DC gain error at step 0, noted in the Chapter 8 listing).
+(a one-LSB DC gain error at step 0, noted in the Chapter 11 listing).
 Usage:  python3 tools/gen_farrow_weights.py [steps] > include/generated/farrow_weights.h   (default steps = 32)
 """
 import sys

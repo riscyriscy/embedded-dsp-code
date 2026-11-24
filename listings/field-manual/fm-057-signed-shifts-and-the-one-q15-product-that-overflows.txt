@@ -1,0 +1,13 @@
+Embedded DSP Field Manual, Chapter 12: Bugs and Golden Vectors / Signed shifts and the one Q15 product that overflows
+Listing 58 of 61 (index 57, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: output of bench/shift_check.c, the same on the host and on the QEMU Cortex-M4F model; bench/shift_check.txt
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+q15_mul_trunc(-32768, -32768) = 32768, stored in int16_t = -32768
+q15_mul_sat(-32768, -32768)   = 32767
+x = -3: x >> 1 = -2, x / 2 = -1
+x = -1: x >> 1 = -1, x / 2 =  0
+x =  1: x >> 1 =  0, x / 2 =  0
+x =  3: x >> 1 =  1, x / 2 =  1
+over all 65536 Q15 values: mean x / 16 = -0.0312
+  mean of x / 16 = -0.0312, of x >> 4 = -0.5000, of (x + 8) >> 4 = 0.0000

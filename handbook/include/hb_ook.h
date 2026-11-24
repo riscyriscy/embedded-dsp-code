@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 12 (OOK, RFID and NFC), HB[93]: envelope magnitude (alpha-max-plus-beta-min) and adaptive-threshold OOK decision.
+/* Source: Embedded DSP Handbook, Chapter 15 (OOK, RFID and NFC), HB[93]: envelope magnitude (alpha-max-plus-beta-min) and adaptive-threshold OOK decision.
  * MIT License.
  * Host build: <stdint.h> is included.  (HB[94], tag_backscatter_bit(), is a HAL-dependent conceptual listing: reference-only, see reference/ and the full verbatim archive in ../listings/handbook/.) */
 #ifndef HB_OOK_H

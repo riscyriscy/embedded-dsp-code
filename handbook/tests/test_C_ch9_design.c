@@ -1,4 +1,4 @@
-/* Chapter 9: loop-filter design equations and the worked example (HB[77], HB[78], HB[79]).
+/* Chapter 12: loop-filter design equations and the worked example (HB[77], HB[78], HB[79]).
  * HB[77]/[78] are formulas / worked arithmetic (not code): every number in them is re-derived here.  Independent checks:
  *   - the damping and noise bandwidth that the Kp/Ki ACTUALLY give: closed-loop poles of the linear loop the prose
  *     itself describes (freq += Ki*e; vco += freq + Kp*e; e = theta_in - vco) and its impulse-response noise bandwidth;

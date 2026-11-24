@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / Exporting the RRC taps: design_rrc.py
- * Listing 33 of 57 (index 32, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 33 of 61 (index 32, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_timing.h src/fm_timing.c | Checked by: tests/test_nco_qpsk.c (Gardner sign, interpolator, PI loop)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 2: Filters You Ship / FIR: convolution, sized and generated
- * Listing 10 of 57 (index 9, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 10 of 61 (index 9, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_fir.h src/fm_fir.c | Checked by: tests/test_filters.c, tests/test_vectors.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

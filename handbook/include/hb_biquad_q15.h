@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 (A fixed-point biquad: why Q1.15 coefficients don't work).
+/* Source: Embedded DSP Handbook, Chapter 5 (A fixed-point biquad: why Q1.15 coefficients don't work).
  * Q2.14 biquad, DF2T, wide state. */
 #ifndef HB_BIQUAD_Q15_H
 #define HB_BIQUAD_Q15_H
@@ -14,7 +14,7 @@
 #define FLOAT_TO_Q2_14(f) ((int16_t)lrintf(fmaxf(-32768.0f, fminf((f) * (1 << Q2_14_SHIFT), 32767.0f))))
 
 // Q2.14 coefficient x Q1.15 sample -> Q1.15-scaled product, ROUNDED rather than truncated.
-// Chapter 1 already establishes why (q15_mul_trunc vs. q15_mul_round, in the limit-cycle
+// Chapter 2 already establishes why (q15_mul_trunc vs. q15_mul_round, in the limit-cycle
 // discussion): a one-directional truncation bias doesn't average out, and in a feedback path
 // specifically, that bias gets divided by (1 + a1 + a2), which is small by construction for
 // any lowpass or bandpass design. For a narrowband section that denominator can be very small,

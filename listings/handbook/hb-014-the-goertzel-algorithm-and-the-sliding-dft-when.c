@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / The Goertzel algorithm and the sliding DFT: when you only need one bin
+ * Embedded DSP Handbook, Chapter 3: DFT and FFT / The Goertzel algorithm and the sliding DFT: when you only need one bin
  * Listing 15 of 119 (index 14, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_sdft.h src/hb_sdft.c | Checked by: tests/test_A_sdft.c (12 checks): exact vs direct DFT of the window, +j sign required, float drift over 2e6 samples (1e-5 -> 1e-3), hard reset cures it, damped variant (harness) bounded
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

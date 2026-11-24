@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 2: Filters You Ship / Three filters that don't need a design tool
- * Listing 14 of 57 (index 13, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 14 of 61 (index 13, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_simple_filters.h src/fm_simple_filters.c | Checked by: tests/test_filters.c (DC blocker removes positive and negative DC; vs double-precision reference)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 3: STM32 FMAC (Filter Math Accelerator) / The IIR case: what actually changes from the FIR config above
+ * Embedded DSP Handbook, Chapter 6: STM32 FMAC (Filter Math Accelerator) / The IIR case: what actually changes from the FIR config above
  * Listing 30 of 119 (index 29, counting from 0 in book order), exactly as it appears in the book.
  * Status: reference-only | Built as: reference/hb_fmac_hal_iir_delta.c | Checked by: STM32 HAL FMAC delta for IIR (struct field assignments only)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

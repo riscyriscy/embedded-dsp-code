@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 4 (RFFT packing, worked in code).
+/* Source: Embedded DSP Handbook, Chapter 7 (RFFT packing, worked in code).
  * Code from the Embedded DSP Handbook; MIT License.
  * Pack two real N-point signals into one complex buffer; unpack the two spectra after fft(). */
 #include "hb_rfft_pack.h"
@@ -13,7 +13,7 @@ void rfft_pack(const float *a, const float *b, complex_t *packed, int N) {
     }
 }
 
-// After running the ordinary complex FFT (Chapter 4's fft()) on 'packed', unpack the two real
+// After running the ordinary complex FFT (Chapter 7's fft()) on 'packed', unpack the two real
 // spectra A[k] and B[k] from the combined result Z[k], using conjugate symmetry:
 //   A[k] = (Z[k] + conj(Z[N-k])) / 2
 //   B[k] = (Z[k] - conj(Z[N-k])) / (2j)

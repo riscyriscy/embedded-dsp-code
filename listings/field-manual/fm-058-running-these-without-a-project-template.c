@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 12: Bugs and Golden Vectors / Running these without a project template
- * Listing 57 of 57 (index 56, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 59 of 61 (index 58, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: tests/test_vectors.c | Checked by: the harness the book lists, run as `make test` (main() is book_vectors() so extra rows can share the process)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

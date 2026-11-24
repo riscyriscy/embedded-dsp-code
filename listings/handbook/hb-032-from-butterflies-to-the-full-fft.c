@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / From butterflies to the full FFT
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / From butterflies to the full FFT
  * Listing 33 of 119 (index 32, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fft.c include/hb_fft.h | Checked by: tests/test_B_fft.c: bit reversal vs bit-by-bit definition, fft vs naive double DFT N=8..1024, impulse, tone, Parseval, golden N=8 cosine
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

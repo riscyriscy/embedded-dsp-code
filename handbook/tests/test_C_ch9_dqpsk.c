@@ -1,4 +1,4 @@
-/* Chapter 9: differential QPSK decoder (HB[82]).
+/* Chapter 12: differential QPSK decoder (HB[82]).
  * References: nearest-of-four decision on the phase difference in double precision; a transmitter written in the test that
  * accumulates the phase (the "0 -> +90 -> 180 -> -90" Gray ring: 00, 10, 11, 01).  Claims tested: the quantiser, the
  * unsigned-wrap subtraction, immunity to any constant carrier rotation (the Costas ambiguity), and "a cycle slip costs only

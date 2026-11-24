@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / Preamble acquisition: finding the packet before locking onto anything
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / Preamble acquisition: finding the packet before locking onto anything
  * Listing 69 of 119 (index 68, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_preamble.h src/hb_preamble.c | Checked by: tests/test_C_ch8_preamble.c: correlation peak at the preamble end, vs direct correlation, noise rejection
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

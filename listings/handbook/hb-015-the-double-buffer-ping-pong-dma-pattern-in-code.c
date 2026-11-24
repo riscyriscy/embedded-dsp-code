@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / The double-buffer (ping-pong) DMA pattern, in code
- * Listing 16 of 119 (index 15, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 4: Embedded DSP System Checklist and Lab 0 / The double-buffer (ping-pong) DMA pattern, in code
+ * Listing 16 of 119 (index 15, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: examples/hb_ping_pong_dma.c tests/shims/hbA_stm32_hal_stub.h | Checked by: tests/test_A_dma.c (20 checks): callbacks, no-copy pointers, gap-free stream via a DMA model, overrun drop-and-count, hand-off inside a masked section
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), HAL_ADC_ConvCpltCallback is replaced by a comment that points to Field Manual listing fm-003. The text below is the full listing, kept so the compiled module still matches it.
  */
 #define BLOCK_SIZE 128
 static int16_t adc_dma_buffer[2 * BLOCK_SIZE];  // circular DMA target, two halves
@@ -36,6 +37,6 @@ void main_loop_process_audio(void) {
         int16_t *block = (int16_t *)ready_block;
         ready_block = NULL;
         __set_PRIMASK(primask);
-        process_block(block, BLOCK_SIZE);   // your filter/demodulator chain, Chapters 1-9
+        process_block(block, BLOCK_SIZE);   // your filter/demodulator chain, Chapters 2-12
     }
 }

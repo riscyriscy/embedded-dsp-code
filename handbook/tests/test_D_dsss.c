@@ -1,4 +1,4 @@
-/* Chapter 11 (Spread Spectrum), HB[91] 4-bit LFSR + spread/despread, HB[92] early-late DLL error (src/hb_dsss.c).
+/* Chapter 14 (Spread Spectrum), HB[91] 4-bit LFSR + spread/despread, HB[92] early-late DLL error (src/hb_dsss.c).
  * HB[90] (processing gain = 10 log10(chip_rate/bit_rate)) is a formula, checked in tests/test_D_formulas.c.
  * References: the LFSR recurrence derived on paper (right-shift register, new MSB = b0 ^ b3  =>  o[t+4] = o[t] ^ o[t+3],
  * i.e. x^4 + x^3 + 1, which is primitive, so the period must be 15); the m-sequence autocorrelation property (-1 at every

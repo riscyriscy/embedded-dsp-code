@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (3. Carrier recovery: a Costas loop).
+/* Source: Embedded DSP Handbook, Chapter 11 (3. Carrier recovery: a Costas loop).
  * costas_phase_error(), costas_loop_t, costas_update(), costas_apply_correction() (uses nco_t from hb_nco.h).
  * MIT License. */
 #include "hb_costas.h"
@@ -15,7 +15,7 @@ int32_t costas_phase_error(int32_t i, int32_t q) {
 }
 
 void costas_update(costas_loop_t *c, int32_t phase_error) {
-    // The gains turn detector units into NCO phase words (Chapter 9), so kp *
+    // The gains turn detector units into NCO phase words (Chapter 12), so kp *
     // phase_error is far wider than 32 bits: form the products in 64 bits.
     // Adding half before the >> 16 rounds to nearest; a bare shift floors,
     // which biases the integrator negative on zero-mean error.

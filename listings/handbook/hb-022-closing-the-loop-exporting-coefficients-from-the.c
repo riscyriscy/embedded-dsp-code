@@ -1,10 +1,10 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / Closing the loop: exporting coefficients from the design tool to C
  * Listing 23 of 119 (index 22, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_fir_q15.h src/hb_fir_q15.c | Checked by: tests/test_A_fir_q15.c (30 checks): bit-exact vs int64 convolution with round-to-nearest, saturating; Step-7 peak error 2.8 LSB
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
-// The Q15 counterpart to Chapter 1's fir_filter_t: coefficients and history are native
+// The Q15 counterpart to Chapter 2's fir_filter_t: coefficients and history are native
 // int16_t, matching exactly what design_filter.py exports, with the wider accumulator
 // appearing only inside fir_process_q15 itself, never in the stored state.
 typedef struct {

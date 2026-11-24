@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / 3. FM demodulation via I/Q (the practical workhorse)
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / 3. FM demodulation via I/Q (the practical workhorse)
  * Listing 55 of 119 (index 54, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_fm_demod.h src/hb_fm_demod.c | Checked by: tests/test_B_fm_demod.c: output = A^2 sin(dphi)/2^16, sign, proportional to deviation, small-angle error 1-sin(x)/x quantified, int64 range
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

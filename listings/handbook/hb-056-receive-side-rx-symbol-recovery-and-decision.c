@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Receive side (RX): symbol recovery and decision
- * Listing 57 of 119 (index 56, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / Receive side (RX): symbol recovery and decision
+ * Listing 57 of 119 (index 56, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: src/hb_qpsk.c include/hb_qpsk.h | Checked by: tests/test_B_qpsk.c: round trip, sign boundaries, 1-bit/2-bit error costs, Monte-Carlo BER vs Q(A/sigma)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * No longer printed in the book (November 2026): this listing is now a paragraph that points to Field Manual listing fm-026 (qpsk_demodulate_symbol). The text below is the former Handbook listing, kept so the compiled module still matches it.
  */
 // After quadrature downconversion (quadrature_mix), lowpass filtering, matched filtering
 // (root-raised-cosine FIR), and symbol-timing recovery, you have one I/Q sample per symbol.

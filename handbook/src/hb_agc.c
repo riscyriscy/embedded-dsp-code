@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (AGC: as code, not a footnote).
+/* Source: Embedded DSP Handbook, Chapter 11 (AGC: as code, not a footnote).
  * agc_t, agc_update(), agc_apply().  MIT License. */
 #include "hb_agc.h"
 

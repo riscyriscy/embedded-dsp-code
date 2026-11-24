@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, Chapter 3: FFT and Goertzel / Reading the spectrum
-Listing 16 of 57 (index 15, counting from 0 in book order), exactly as it appears in the book.
+Listing 16 of 61 (index 15, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (formula) | Checked by: DFT definition
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

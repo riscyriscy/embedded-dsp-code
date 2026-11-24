@@ -1,4 +1,4 @@
-# Embedded DSP Handbook, HB[102]: Chapter 17, CPU budget formula (pseudo-code)
+# Embedded DSP Handbook, HB[102]: Chapter 20, CPU budget formula (pseudo-code)
 # Status: not-code (pseudo-code).  Listing reproduced verbatim below this banner; MIT License.
 # -----
 required_cycles_per_second =
@@ -15,5 +15,5 @@ required_cycles_per_second =
 available_cycles_per_second = cpu_clock_hz * fraction_of_cpu_time_available_for_this_task
 
 // A required/available ratio meaningfully above 1 means: reduce filter/equalizer taps,
-// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 3/6), or move to
+// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 6/9), or move to
 // dedicated radio silicon rather than software demodulation on the general MCU.

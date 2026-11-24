@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 7: RF Front-End and Link Budget Basics / Noise figure and the Friis cascade formula
+Embedded DSP Handbook, Chapter 10: RF Front-End and Link Budget Basics / Noise figure and the Friis cascade formula
 Listing 61 of 119 (index 60, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as:  | Checked by: formula; worked example (1.413/6.310/3.981/100/0.251, 0.053+0.119, F=1.585, 2.0 dB) re-derived incl. noise-temperature cascade in tests/test_C_ch7_link.c
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

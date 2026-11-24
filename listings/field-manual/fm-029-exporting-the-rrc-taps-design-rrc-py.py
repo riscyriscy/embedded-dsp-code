@@ -1,5 +1,5 @@
 # Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / Exporting the RRC taps: design_rrc.py
-# Listing 30 of 57 (index 29, counting from 0 in book order), exactly as it appears in the book.
+# Listing 30 of 61 (index 29, counting from 0 in book order), exactly as it appears in the book.
 # Status: not-code | Built as: tools/design_rrc.py | Checked by: Python tool; regeneration checked by `make check-generated`
 # MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 # design_rrc.py - run once offline, whenever alpha or sps changes

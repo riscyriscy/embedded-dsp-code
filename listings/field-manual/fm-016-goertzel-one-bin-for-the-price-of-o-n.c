@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 3: FFT and Goertzel / Goertzel: one bin for the price of O(N)
- * Listing 17 of 57 (index 16, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 17 of 61 (index 16, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_goertzel.h src/fm_goertzel.c | Checked by: tests/test_filters.c, tests/test_vectors.c (N=8 vector vs DFT)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

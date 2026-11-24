@@ -1,9 +1,9 @@
-/* HB[59]: iq_dc_correct() (per-rail Chapter 1 DC blocker) and iq_imbalance_correct() (src/hb_iq_correct.c; links src/hb_filters.c).
+/* HB[59]: iq_dc_correct() (per-rail Chapter 2 DC blocker) and iq_imbalance_correct() (src/hb_iq_correct.c; links src/hb_filters.c).
  * References: closed-form DC-blocker gain |1-e^{-jw}|/|1-r e^{-jw}|, and an explicit impairment model that the 2x2 matrix undoes:
  *   I' = I,   Q' = g (Q cos(phi) + I sin(phi))     (g = gain of the Q path, phi = phase error away from 90 degrees).
  * This model is inverted EXACTLY by q = (q' - beta i')/alpha with alpha = g cos(phi), beta = g sin(phi).
- * iq_dc_correct() only applies Chapter 1's dc_blocker_process() to each rail; the checks on how completely the blocker removes a
- * constant (marked "blocker behaviour") exercise that Chapter 1 code through the I/Q wrapper, the rest is independent of it. */
+ * iq_dc_correct() only applies Chapter 2's dc_blocker_process() to each rail; the checks on how completely the blocker removes a
+ * constant (marked "blocker behaviour") exercise that Chapter 2 code through the I/Q wrapper, the rest is independent of it. */
 #include <stdint.h>
 #include <complex.h>
 #include <string.h>
@@ -40,7 +40,7 @@ int main(void) {
       for (int n = 0; n < 6000; n++) { int32_t i = 10000, q = -10000; iq_dc_correct(&c, &i, &q); yp = i; yn = q; }
       CHECK(yp == 0 && yn == 0, "blocker behaviour: constant +10000 / -10000 decays to 0 (got %d / %d)", yp, yn);
       }
-    /* the wrapper is exactly one Chapter 1 blocker per rail: same outputs, independent state */
+    /* the wrapper is exactly one Chapter 2 blocker per rail: same outputs, independent state */
     { iq_dc_corrector_t c; init_corrector(&c); dc_blocker_t bi, bq; memset(&bi, 0, sizeof bi); memset(&bq, 0, sizeof bq); bi.r_q15 = bq.r_q15 = R_Q15;
       int same = 1;
       for (int n = 0; n < 2000; n++) {
@@ -49,7 +49,7 @@ int main(void) {
           if (i != dc_blocker_process(&bi, i0) || q != dc_blocker_process(&bq, q0)) same = 0;
       }
       CHECK(same, "iq_dc_correct == dc_blocker_process on each rail, rails independent"); }
-    /* settling: a DC step decays like r^n (Chapter 1: "closer to 1.0 = slower settling"); closed form 10000 r^n */
+    /* settling: a DC step decays like r^n (Chapter 2: "closer to 1.0 = slower settling"); closed form 10000 r^n */
     { iq_dc_corrector_t c; init_corrector(&c); int n99 = -1;
       for (int n = 0; n < 3000; n++) {
           int32_t i = 10000, q = 0;

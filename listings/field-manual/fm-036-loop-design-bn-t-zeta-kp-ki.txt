@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Loop design: Bn*T, zeta, Kp, Ki
-Listing 37 of 57 (index 36, counting from 0 in book order), exactly as it appears in the book.
+Listing 37 of 61 (index 36, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (worked example) | Checked by: theta_n = 0.01886
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

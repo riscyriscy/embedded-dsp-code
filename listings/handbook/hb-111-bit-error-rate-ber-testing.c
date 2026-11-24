@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / Bit error rate (BER) testing
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / Bit error rate (BER) testing
  * Listing 112 of 119 (index 111, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_testkit.c include/hb_testkit.h | Checked by: tests/test_D_testkit.c: counts/rate, 64-bit counters across 2^32, no-bits case
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

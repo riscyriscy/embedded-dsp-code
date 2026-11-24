@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / A Q15 butterfly, worked
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / A Q15 butterfly, worked
  * Listing 34 of 119 (index 33, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_fft_q15.h | Checked by: tests/test_B_fft_q15.c: sat/cmul/butterfly vs double complex; golden N=8 (4097 / 0,-1) reproduced via a harness driver; |z| <= 1 precondition
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

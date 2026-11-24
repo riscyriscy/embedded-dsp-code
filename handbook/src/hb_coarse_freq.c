@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 9 (Pull-in range vs. pull-in time).
+/* Source: Embedded DSP Handbook, Chapter 12 (Pull-in range vs. pull-in time).
  * coarse_freq_estimate_hz(): delay-and-conjugate-multiply frequency estimate over a known preamble.
  * MIT License. */
 #include "hb_coarse_freq.h"
@@ -7,7 +7,7 @@
 // Coarse frequency estimate from the same preamble already used for coarse timing above:
 // correlate preamble_iq against a copy of itself delayed by 'lag' samples. A residual carrier
 // offset rotates phase steadily across that lag; this is the same delay-and-conjugate-multiply
-// mechanism Chapter 10's CFO estimator applies to the OFDM cyclic prefix, applied here to a
+// mechanism Chapter 13's CFO estimator applies to the OFDM cyclic prefix, applied here to a
 // known preamble instead.
 // The modulation cancels in that product only if the preamble repeats with a
 // period that divides lag (an unmodulated tone, or +1,+1,-1,-1,... with lag

@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 9: FEC and the CPU Budget / Soft decision: don't throw away confidence
- * Listing 45 of 57 (index 44, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 45 of 61 (index 44, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_fec.h src/fm_fec.c | Checked by: tests/test_fec.c (LLR signs/bit order); LLR_SCALE_Q is defined in the listing and overridable
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

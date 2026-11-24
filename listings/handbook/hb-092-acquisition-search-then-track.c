@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 11: Spread Spectrum: DSSS and FHSS / Acquisition: search, then track
+ * Embedded DSP Handbook, Chapter 14: Spread Spectrum: DSSS and FHSS / Acquisition: search, then track
  * Listing 93 of 119 (index 92, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_dsss.c include/hb_dsss.h | Checked by: tests/test_D_dsss.c: early-late error vs closed form from the code autocorrelation for delays -2..+2 samples, sign convention; N-D2 (array convention ambiguity)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
@@ -14,5 +14,5 @@ int32_t dll_chip_error(const int8_t *early_corr_chips, const int8_t *late_corr_c
         early_energy += early_corr_chips[i] * pn_sequence[i];
         late_energy  += late_corr_chips[i]  * pn_sequence[i];
     }
-    return early_energy - late_energy;  // feeds the same style of loop filter as Chapter 9
+    return early_energy - late_energy;  // feeds the same style of loop filter as Chapter 12
 }

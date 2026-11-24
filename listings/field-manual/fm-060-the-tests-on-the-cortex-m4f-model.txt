@@ -1,0 +1,12 @@
+Embedded DSP Field Manual, Appendix A: Reference Board and Stage Costs / The tests on the Cortex-M4F model
+Listing 61 of 61 (index 60, counting from 0 in book order), exactly as it appears in the book.
+Status: not-code | Built as: (output) | Checked by: output of `make -C field-manual/bench tests` (QEMU mps2-an386); bench/tests_m4.txt
+MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+---
+test_chain: 25 checks, 0 failed -> PASS
+test_dma: 9 checks, 0 failed -> PASS
+test_fec: 11 checks, 0 failed -> PASS
+test_filters: 90 checks, 0 failed -> PASS
+test_lab0: 5 checks, 0 failed -> PASS
+test_nco_qpsk: 614 checks, 0 failed -> PASS
+ALL VECTORS OK

@@ -1,8 +1,8 @@
-/* Source: Embedded DSP Handbook, Chapter 10 (OFDM and Multicarrier Modulation): HB[83] IFFT/FFT mapping, HB[84] cyclic prefix,
+/* Source: Embedded DSP Handbook, Chapter 13 (OFDM and Multicarrier Modulation): HB[83] IFFT/FFT mapping, HB[84] cyclic prefix,
  * HB[85] CFO estimate from the CP, HB[86]/[87] one-tap equalizer + comb pilots, HB[88] PAPR clipping, HB[89] windowing.
  * MIT License.
  * Host build:
- *   - HB[83] calls qpsk_modulate_symbol()/iq_sample_t from Chapter 6 (HB[55]); pulled in via hb_qpsk.h (link src/hb_qpsk.c).
+ *   - HB[83] calls qpsk_modulate_symbol()/iq_sample_t from Chapter 9 (HB[55]); pulled in via hb_qpsk.h (link src/hb_qpsk.c).
  *   - HB[83] ofdm_tx_scratch is a file-static array used only by example_ofdm_tx_call(); it stays in the .c file.
  *   - stdint.h / math.h are included (the listings use uint8_t, cosf, sqrtf). */
 #ifndef HB_OFDM_H
@@ -15,7 +15,7 @@
 #include "hb_qpsk.h"
 
 // Conceptual TX: map bits to per-subcarrier QPSK symbols, then IFFT to time domain.
-// (Reuses complex_t and qpsk_modulate_symbol from Chapter 6.)
+// (Reuses complex_t and qpsk_modulate_symbol from Chapter 9.)
 
 // A fixed-size, compile-time-bounded array, not a VLA: MISRA and several embedded
 // toolchains (C89-only, some -std flags) reject `complex_t freq_domain[num_subcarriers]`

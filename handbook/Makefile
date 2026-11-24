@@ -1,8 +1,8 @@
 # Handbook host tests.  `make test` builds and runs every tests/test_*.c.
 # Each test lists the library sources it links in tests/<name>.deps (one line, space separated, paths
 # relative to this directory).  Units are separate translation units on purpose: the Handbook reuses
-# names with different types in different chapters (FIR_TAPS is 32 float in Chapter 1 but 19 Q15 in
-# Chapter 2), so they must never be linked into one image.
+# names with different types in different chapters (FIR_TAPS is 32 float in Chapter 2 but 19 Q15 in
+# Chapter 5), so they must never be linked into one image.
 CC      ?= cc
 CFLAGS  ?= -std=c11 -O1 -g -Wall -Wextra -Wpedantic -Wno-unused-parameter -D_DEFAULT_SOURCE
 INC     := -Iinclude -Iinclude/generated -Itests -Itests/shims

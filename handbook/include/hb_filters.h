@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (section 4, IIR Filters; limit-cycle section; "Filters you actually ship").
+/* Source: Embedded DSP Handbook, Chapter 2 (section 2, IIR Filters; limit-cycle section; "Filters you actually ship").
  * Float biquad (DF2T), q15_mul_round, DC blocker, one-pole LPF, notch designer. */
 #ifndef HB_FILTERS_H
 #define HB_FILTERS_H

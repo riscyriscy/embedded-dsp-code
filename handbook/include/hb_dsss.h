@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 11 (Spread Spectrum), HB[91] 4-bit LFSR PN generator + spread/despread, HB[92] early-late DLL error.
+/* Source: Embedded DSP Handbook, Chapter 14 (Spread Spectrum), HB[91] 4-bit LFSR PN generator + spread/despread, HB[92] early-late DLL error.
  * MIT License.
  * Host build: <stdint.h> is included. */
 #ifndef HB_DSSS_H

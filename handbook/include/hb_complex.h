@@ -1,5 +1,5 @@
 /* complex_t, cmul, butterfly.
- * Source: Embedded DSP Handbook, Chapter 4 (What one butterfly computes).
+ * Source: Embedded DSP Handbook, Chapter 7 (What one butterfly computes).
  * Code from the Embedded DSP Handbook; header-only; MIT License. */
 #ifndef HB_COMPLEX_H
 #define HB_COMPLEX_H

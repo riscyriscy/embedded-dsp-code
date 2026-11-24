@@ -1,16 +1,16 @@
-/* Source: Embedded DSP Handbook, Chapter 10 (OFDM and Multicarrier Modulation): HB[83] IFFT/FFT mapping, HB[84] cyclic prefix,
+/* Source: Embedded DSP Handbook, Chapter 13 (OFDM and Multicarrier Modulation): HB[83] IFFT/FFT mapping, HB[84] cyclic prefix,
  * HB[85] CFO estimate from the CP, HB[86]/[87] one-tap equalizer + comb pilots, HB[88] PAPR clipping, HB[89] windowing.
  * MIT License.
  * Host build:
- *   - HB[83] calls qpsk_modulate_symbol()/iq_sample_t from Chapter 6 (HB[55]); pulled in via hb_qpsk.h (link src/hb_qpsk.c).
+ *   - HB[83] calls qpsk_modulate_symbol()/iq_sample_t from Chapter 9 (HB[55]); pulled in via hb_qpsk.h (link src/hb_qpsk.c).
  *   - HB[83] ofdm_tx_scratch is a file-static array used only by example_ofdm_tx_call(); it stays in the .c file.
  *   - stdint.h / math.h are included (the listings use uint8_t, cosf, sqrtf). */
 #include "hb_ofdm.h"
 
 // ifft(): the inverse transform, defined here in terms of the same forward fft() from
-// Chapter 4 rather than a second, separately maintained butterfly implementation. The
+// Chapter 7 rather than a second, separately maintained butterfly implementation. The
 // standard identity: conjugate the input, run the ordinary forward FFT unmodified,
-// conjugate the result, and scale by 1/N. This reuses Chapter 4's fft() exactly as written.
+// conjugate the result, and scale by 1/N. This reuses Chapter 7's fft() exactly as written.
 //
 // Conjugates freq_domain_in IN PLACE instead of copying it into a local scratch array
 // first: freq_domain_in isn't read again by this caller after the call returns, and an
@@ -23,7 +23,7 @@ void ifft(complex_t *freq_domain_in, complex_t *time_domain_out, int n) {
     for (int i = 0; i < n; i++) {
         freq_domain_in[i].im = -freq_domain_in[i].im;
     }
-    fft(freq_domain_in, time_domain_out, n);   // Chapter 4's forward FFT, called unmodified
+    fft(freq_domain_in, time_domain_out, n);   // Chapter 7's forward FFT, called unmodified
     for (int i = 0; i < n; i++) {
         float re = time_domain_out[i].re;
         time_domain_out[i].re =  re / n;
@@ -34,12 +34,12 @@ void ifft(complex_t *freq_domain_in, complex_t *time_domain_out, int n) {
 // freq_domain_scratch is CALLER-supplied, not a local array: the same OFDM_MAX_SUBCARRIERS
 // * 8 bytes = 16 KB that ifft() above used to hide in a local array, just moved to wherever
 // the caller actually wants that storage duration to live (typically a static or BSS
-// buffer declared once, the same pattern Chapter 1's Lab 0 already uses for its own
+// buffer declared once, the same pattern Chapter 4's Lab 0 already uses for its own
 // persistent FFT buffers) instead of growing fresh on this function's stack frame every
 // call. Not reentrant as written: two calls sharing one freq_domain_scratch buffer from
 // two contexts (two RTOS tasks, an ISR and a task) will corrupt each other's in-flight
 // symbol; give each concurrent caller its own scratch buffer if that's a real possibility,
-// the same reentrancy tradeoff Chapter 1's ping-pong DMA state carries.
+// the same reentrancy tradeoff Chapter 4's ping-pong DMA state carries.
 void ofdm_modulate_symbol(uint8_t *bits, int num_subcarriers,
                             complex_t *freq_domain_scratch, complex_t *time_domain_out) {
     for (int k = 0; k < num_subcarriers; k++) {
@@ -78,7 +78,7 @@ void add_cyclic_prefix(complex_t *ofdm_symbol, int n, int cp_len, complex_t *out
 
 // RX: discard the CP, then FFT the remainder.
 void remove_cp_and_demod(complex_t *rx_with_cp, int n, int cp_len, complex_t *freq_domain_out) {
-    fft(&rx_with_cp[cp_len], freq_domain_out, n);   // fft(): forward FFT, same butterfly core as Ch. 4
+    fft(&rx_with_cp[cp_len], freq_domain_out, n);   // fft(): forward FFT, same butterfly core as Ch. 7
 }
 
 // CFO estimate from the cyclic prefix's self-similarity: correlate the CP against the tail
@@ -90,17 +90,17 @@ complex_t cfo_estimate_from_cp(const complex_t *rx_with_cp, int n, int cp_len) {
         complex_t a = rx_with_cp[i];                  // the CP itself
         complex_t b = rx_with_cp[n + i];               // the tail sample it was copied from
         complex_t b_conj = { b.re, -b.im };
-        complex_t prod = cmul(a, b_conj);              // cmul from Chapter 4
+        complex_t prod = cmul(a, b_conj);              // cmul from Chapter 7
         corr.re += prod.re;
         corr.im += prod.im;
     }
-    // atan2 of this value (Chapter 6) is the CFO phase over n samples, already signed as a
+    // atan2 of this value (Chapter 9) is the CFO phase over n samples, already signed as a
     // correction: atan2(corr.im, corr.re) / n is the phase_per_sample for cfo_correct().
     return corr;
 }
 
 // Correct CFO by rotating every sample in the block by the estimated per-sample phase
-// increment, the same NCO-driven rotation as Chapter 6's quadrature mixer, just derived
+// increment, the same NCO-driven rotation as Chapter 9's quadrature mixer, just derived
 // from this measurement instead of a fixed known frequency.
 void cfo_correct(complex_t *block, int n, float phase_per_sample) {
     float phase = 0.0f;
@@ -119,7 +119,7 @@ complex_t equalize_subcarrier(complex_t received, complex_t channel_estimate_h) 
     float mag_sq = channel_estimate_h.re * channel_estimate_h.re
                  + channel_estimate_h.im * channel_estimate_h.im;
     complex_t h_conj = { channel_estimate_h.re, -channel_estimate_h.im };
-    complex_t numerator = cmul(received, h_conj);     // cmul from Chapter 4
+    complex_t numerator = cmul(received, h_conj);     // cmul from Chapter 7
     complex_t result = { numerator.re / mag_sq, numerator.im / mag_sq };
     return result;
 }
@@ -159,7 +159,7 @@ void estimate_channel_comb_pilots(const complex_t *received, const complex_t *kn
 // Hard-clip an OFDM time-domain symbol's magnitude to a fixed ceiling, the simplest PAPR
 // reduction technique: cheap to compute, but trades peak reduction for both in-band distortion
 // (EVM degradation on the clipped samples themselves) and out-of-band spectral regrowth
-// (Chapter 19's spectral mask concern), neither of which this function alone accounts for.
+// (Chapter 22's spectral mask concern), neither of which this function alone accounts for.
 void ofdm_clip_papr(complex_t *time_domain, int n, float clip_ceiling) {
     for (int i = 0; i < n; i++) {
         float mag = sqrtf(time_domain[i].re * time_domain[i].re

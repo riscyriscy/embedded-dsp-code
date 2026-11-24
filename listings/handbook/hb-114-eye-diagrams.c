@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / Eye diagrams
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / Eye diagrams
  * Listing 115 of 119 (index 114, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_testkit.c include/hb_testkit.h | Checked by: tests/test_D_testkit.c: eye dump line count/time index/amplitudes, partial symbol dropped, clean pulse train overlays exactly
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

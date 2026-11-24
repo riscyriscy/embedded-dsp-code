@@ -9,7 +9,7 @@ Repository: `https://github.com/riscyriscy/embedded-dsp-code`
 
 ## What is here
 
-Every code listing in both books, extracted verbatim, split into headers and sources, built on a host machine, and tested against golden vectors
+Every code listing in both books, extracted verbatim (nineteen functions that the two books share are printed only in the Field Manual, and the Handbook archive notes where its book points there), split into headers and sources, built on a host machine, and tested against golden vectors
 and independent references where that is possible. Nothing needs hardware.
 
 ```
@@ -17,6 +17,7 @@ git clone https://github.com/riscyriscy/embedded-dsp-code
 cd embedded-dsp-code
 make -C field-manual test     # 7 test programs
 make -C handbook test         # 49 test programs
+make -C field-manual/bench    # optional: stage costs on a Cortex-M4F model; needs arm-none-eabi-gcc and qemu-system-arm
 ```
 
 Needs a C11 compiler and `make`. `make check-generated` (coefficient tables regenerated from the Python tools and diffed) also needs `python3` with `numpy` and `scipy`.
@@ -37,7 +38,7 @@ Needs a C11 compiler and `make`. `make check-generated` (coefficient tables rege
 | reference-only | Vendor HAL, CMSIS or AT-command material: archived, not built |
 | not-code | Formula, worksheet, procedure, or a Python design tool |
 
-Counts: Field Manual, 57 listings (34 tested, 1 compiled, 21 not-code, 1 reference-only). Handbook, 119 listings (79 tested, 1 compiled, 5 syntax-only, 8 reference-only, 26 not-code).
+Counts: Field Manual, 61 listings (35 tested, 1 compiled, 23 not-code, 2 reference-only). Handbook, 119 listings (79 tested, 1 compiled, 5 syntax-only, 8 reference-only, 26 not-code).
 "Tested" means passed on a host with the tests in this repository; it does not mean validated on hardware or against a real over-the-air signal.
 
 ## What the tests show, and what they do not

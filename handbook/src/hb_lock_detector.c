@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 9 (Lock detectors and cycle slips).
+/* Source: Embedded DSP Handbook, Chapter 12 (Lock detectors and cycle slips).
  * lock_detector_t, lock_detector_update().  MIT License. */
 #include "hb_lock_detector.h"
 

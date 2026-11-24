@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 7: RF Front-End and Link Budget Basics / Link budget: will the signal actually arrive with enough SNR
+ * Embedded DSP Handbook, Chapter 10: RF Front-End and Link Budget Basics / Link budget: will the signal actually arrive with enough SNR
  * Listing 64 of 119 (index 63, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_link_budget.h src/hb_link_budget.c | Checked by: tests/test_C_ch7_link.c (hand-computed cases, sign of every argument)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

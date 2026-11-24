@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 11: Spread Spectrum: DSSS and FHSS / DSSS: spreading with a pseudorandom chip sequence
+Embedded DSP Handbook, Chapter 14: Spread Spectrum: DSSS and FHSS / DSSS: spreading with a pseudorandom chip sequence
 Listing 91 of 119 (index 90, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: reference/hbD_090_processing_gain_formula.txt | Checked by: formula; worked numbers (100 chips/bit = 20 dB, 15 chips = 11.76 dB) checked in tests/test_D_formulas.c
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

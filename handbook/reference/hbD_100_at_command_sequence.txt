@@ -1,4 +1,4 @@
-# Embedded DSP Handbook, HB[100]: Chapter 15, AT command sequence for a cellular modem socket (exact commands are module-specific)
+# Embedded DSP Handbook, HB[100]: Chapter 18, AT command sequence for a cellular modem socket (exact commands are module-specific)
 # Status: reference-only (AT commands, not C).  Listing reproduced verbatim below this banner; MIT License.
 # -----
 // Illustrative AT command sequence for opening a socket and sending data

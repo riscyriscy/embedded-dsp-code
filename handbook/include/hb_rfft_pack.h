@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 4 (RFFT packing, worked in code).
+/* Source: Embedded DSP Handbook, Chapter 7 (RFFT packing, worked in code).
  * Code from the Embedded DSP Handbook; MIT License.
  * Pack two real N-point signals into one complex buffer; unpack the two spectra after fft(). */
 #ifndef HB_RFFT_PACK_H

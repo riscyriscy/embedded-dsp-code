@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 3: STM32 FMAC (Filter Math Accelerator) / Using it via HAL (the practical path)
+ * Embedded DSP Handbook, Chapter 6: STM32 FMAC (Filter Math Accelerator) / Using it via HAL (the practical path)
  * Listing 29 of 119 (index 28, counting from 0 in book order), exactly as it appears in the book.
  * Status: reference-only | Built as: reference/hb_fmac_hal_config.c | Checked by: STM32 HAL FMAC configuration (placeholders left unfilled in the book, HAL types not available)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

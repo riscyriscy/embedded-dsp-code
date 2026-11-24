@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Carrier recovery: a Costas loop
- * Listing 34 of 57 (index 33, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 34 of 61 (index 33, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_costas.h src/fm_costas.c | Checked by: tests/test_nco_qpsk.c (detector, update split); closed loop: tests/test_chain.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

@@ -18,7 +18,7 @@ def rrc_taps(alpha, sps, span_symbols):
             h[i] = num / den
     return h / np.sqrt(np.sum(h ** 2))              # unit energy - keeps the Q15 export below simple
 
-# Chapter 10's loopback runs the matched filter directly at 2 sps (see above) - deploy taps built
+# Chapter 22's loopback runs the matched filter directly at 2 sps (see above) - deploy taps built
 # for that rate, not the 8-sps design/eye-diagram check below.
 taps = rrc_taps(alpha=0.35, sps=2, span_symbols=4.5)   # 19 taps, matching this book's shared FIR_TAPS
 q15 = np.clip(np.round(taps * 32768), -32768, 32767).astype(np.int16)

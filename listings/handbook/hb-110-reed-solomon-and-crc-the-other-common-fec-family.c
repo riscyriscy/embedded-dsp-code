@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Reed-Solomon and CRC: the other common FEC family
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Reed-Solomon and CRC: the other common FEC family
  * Listing 111 of 119 (index 110, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: gf_mul vs carry-less multiply mod 0x11d for all 65536 pairs, primitive element, field axioms, table sizes
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

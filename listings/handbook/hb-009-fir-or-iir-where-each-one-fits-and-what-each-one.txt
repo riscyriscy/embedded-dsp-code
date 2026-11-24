@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / FIR or IIR: where each one fits, and what each one costs
+Embedded DSP Handbook, Chapter 2: FIR and IIR Filters / FIR or IIR: where each one fits, and what each one costs
 Listing 10 of 119 (index 9, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (output) | Checked by: printed table of tools/fir_vs_iir.py (needs numpy and scipy; not part of make test); reproduced exactly by running it
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

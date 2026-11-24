@@ -36,7 +36,7 @@ static inline int32_t q15_wide_add_sat(int32_t a, int32_t b) {
     return (int32_t)sum;
 }
 
-// Clamps to Q15's own +-32767 range - for two values that are already meant to be final,
+// Clamps to Q15's own range, -32768 to +32767 - for two values that are already meant to be final,
 // narrow Q15 numbers, not wide accumulator state. Reaching for the wrong one of these two
 // either clips legitimate headroom mid-accumulation, or lets a "final" value silently
 // exceed its own range.

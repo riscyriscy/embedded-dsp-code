@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 18 (Forward Error Correction): HB[104] QPSK soft LLR, HB[105] rate-1/2 K=7 convolutional encoder, HB[106] Viterbi ACS step,
+/* Source: Embedded DSP Handbook, Chapter 21 (Forward Error Correction): HB[104] QPSK soft LLR, HB[105] rate-1/2 K=7 convolutional encoder, HB[106] Viterbi ACS step,
  * HB[107] branch-metric construction + traceback, HB[108] rate-3/4 puncturing/de-puncturing, HB[109] block interleaver,
  * HB[110] GF(2^8) tables + multiply.  MIT License.
  * Host build: stdint.h is included; LLR_SCALE_Q and MAX_TRACEBACK_DEPTH are tuning constants with defaults, overridable with -D.
@@ -11,7 +11,7 @@
 /* Tuning constants, overridable with -D.
  * LLR_SCALE_Q: the LLR gain in Q15 used by (i * LLR_SCALE_Q) >> 15; 32768 means a gain of exactly 1.0 (the LLR is the raw
  *   I/Q value).  The product i * LLR_SCALE_Q is computed in int32_t, so |i| * LLR_SCALE_Q must stay below 2^31.
- * MAX_TRACEBACK_DEPTH: the traceback window, 5x the constraint length (35 for this chapter's K=7 code, the Chapter 17
+ * MAX_TRACEBACK_DEPTH: the traceback window, 5x the constraint length (35 for this chapter's K=7 code, the Chapter 20
  *   memory-budget rule of thumb). */
 #ifndef LLR_SCALE_Q
 #define LLR_SCALE_Q 32768

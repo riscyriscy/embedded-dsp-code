@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 11: FMAC and CMSIS-DSP Cheat Sheet / FMAC: the practical shape
- * Listing 56 of 57 (index 55, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 56 of 61 (index 55, counting from 0 in book order), exactly as it appears in the book.
  * Status: reference-only | Built as: (not built) | Checked by: STM32 FMAC HAL configuration; needs the vendor HAL
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

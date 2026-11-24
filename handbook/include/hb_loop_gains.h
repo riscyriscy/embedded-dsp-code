@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 9 (The standard second-order loop design equations).
+/* Source: Embedded DSP Handbook, Chapter 12 (The standard second-order loop design equations).
  * FLOAT_TO_Q16(), COSTAS_KP_Q16(), COSTAS_KI_Q16(), TIMING_GAIN_Q16().  MIT License.
  * Host build: the two `int32_t kp_q16 = ...;` statements that follow the macros live in tests/shims/hb_C_snippet_79.inc
  * (TIMING_GAIN_Q16 still goes through lrintf, which is not a constant expression). */

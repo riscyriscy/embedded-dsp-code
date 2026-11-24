@@ -1,5 +1,5 @@
 Embedded DSP Field Manual, Chapter 5: I/Q and the Demod Chain / The quadrature mixer and the NCO
-Listing 25 of 57 (index 24, counting from 0 in book order), exactly as it appears in the book.
+Listing 25 of 61 (index 24, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: include/generated/nco_table.h | Checked by: the stub in the listing is replaced by the generated table (verified against the book arrays)
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
 ---

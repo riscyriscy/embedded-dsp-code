@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 12: On-Off Keying (OOK), RFID, and NFC / RFID: three frequency bands, one core asymmetry
+ * Embedded DSP Handbook, Chapter 15: On-Off Keying (OOK), RFID, and NFC / RFID: three frequency bands, one core asymmetry
  * Listing 95 of 119 (index 94, counting from 0 in book order), exactly as it appears in the book.
  * Status: syntax-only | Built as: reference/hbD_094_tag_backscatter_bit.c.txt tests/shims/hbD_hb094_tag_backscatter.inc | Checked by: tests/test_D_snippets.c: compiled verbatim against a recording HAL stub; only control flow (bit->load state) and the 13.56 MHz/16 = 847.5 kHz arithmetic checked
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

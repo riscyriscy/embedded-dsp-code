@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 1: Sampling, Q-Format, and DMA / From raw ADC counts to Q15
- * Listing 5 of 57 (index 4, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 5 of 61 (index 4, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_adc.h src/fm_adc.c | Checked by: tests/test_filters.c (all 4096 codes against (adc - 2048) * 16)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

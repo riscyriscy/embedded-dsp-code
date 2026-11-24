@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 7: RF Numbers You Must Type / Noise floor and link budget
- * Listing 43 of 57 (index 42, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 43 of 61 (index 42, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_rf.h src/fm_rf.c | Checked by: tests/test_nco_qpsk.c (link margin); the surrounding formulas are prose
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

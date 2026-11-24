@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 4: Multirate and CIC / PDM microphones: the CIC you'll actually meet
- * Listing 21 of 57 (index 20, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 21 of 61 (index 20, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_cic.h src/fm_cic.c | Checked by: tests/test_filters.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

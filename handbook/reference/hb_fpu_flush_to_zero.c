@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (The float sibling: denormals in a decaying IIR or AGC state).
+/* Source: Embedded DSP Handbook, Chapter 2 (The float sibling: denormals in a decaying IIR or AGC state).
  * MIT License.
  * Listing HB[7]; reference only (needs CMSIS core_cm4.h: __get_FPSCR/__set_FPSCR).  NOT built. */
 // Flush-to-zero (FZ, bit 24 of FPSCR) makes any denormal RESULT flush to zero instead of

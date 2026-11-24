@@ -1,4 +1,4 @@
-/* Chapter 8: Gardner timing error detector + timing loop (HB[70], HB[73]), closed loop.
+/* Chapter 11: Gardner timing error detector + timing loop (HB[70], HB[73]), closed loop.
  *
  * Test signal (generated independently of the code under test): real BPSK, +-1 symbols, analytic raised-cosine pulse
  * (alpha = 0.5), sampled at 2 samples/symbol with a timing offset tau and an optional sampling-clock error eps:
@@ -203,7 +203,7 @@ int main(void) {
         result_t d = run_loop(taus[i], 0.0, kp_f / 40, ki_f / 40, 0, NSYM, 0);
         CHECK(d.settle > 800 || fabs(taus[i]) < 0.1, "40x weaker gains settle in %d symbols from tau=%+.2f; the design gains need < 400", d.settle, taus[i]);
     }
-    /* Chapter 8 prose: both QPSK rails share one sampling clock, so the scalar Gardner TED on the I rail alone locks BOTH rails;
+    /* Chapter 11 prose: both QPSK rails share one sampling clock, so the scalar Gardner TED on the I rail alone locks BOTH rails;
      * summing the two rails' errors doubles the detector gain Kd (so the gains are halved here to compare like with like). */
     {
         for (unsigned k = 0; k < sizeof g_symq / sizeof g_symq[0]; k++) g_symq[k] = ((lcg_next() >> 4) & 1) ? 1 : -1;

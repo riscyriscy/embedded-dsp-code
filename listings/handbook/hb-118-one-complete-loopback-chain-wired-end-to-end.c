@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / One complete loopback chain, wired end to end
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / One complete loopback chain, wired end to end
  * Listing 119 of 119 (index 118, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: tests/shims/hb_E_init.inc | Checked by: tests/test_E_chain.c includes this block verbatim inside a function and drives the receiver with it
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
@@ -17,7 +17,7 @@
 #define TIMING_KP_Q16     TIMING_GAIN_Q16(0.05192, TIMING_KD, MU_PER_SYMBOL)
 #define TIMING_KI_Q16     TIMING_GAIN_Q16(0.001385, TIMING_KD, MU_PER_SYMBOL)
 
-// Chapter 6's runtime table fill, once (not needed with the const tables):
+// Chapter 9's runtime table fill, once (not needed with the const tables):
 nco_table_init();
 radio_config_t radio_cfg = { .loopback_enabled = true };
 qpsk_loopback_rx_t rx = {
@@ -28,10 +28,10 @@ qpsk_loopback_rx_t rx = {
                                                                     // not this golden vector
     .costas      = { .kp = COSTAS_KP_Q16(0.05192, 2.0 * DECISION_AMP),
                      .ki = COSTAS_KI_Q16(0.001385, 2.0 * DECISION_AMP, 2) },
-};  // Chapter 9's worked example (Bn*T = 0.02, zeta = 0.707) in the units
+};  // Chapter 12's worked example (Bn*T = 0.02, zeta = 0.707) in the units
     // costas_update() uses
 // rrc_i / rrc_q are initialized the same way any other fir_q15_t in this book is: fir_init_q15()
-// with the RRC coefficients from Chapter 8's pulse-shape design section
+// with the RRC coefficients from Chapter 11's pulse-shape design section
 // (alpha = 0.35).
 fir_init_q15(&rx.rrc_i, rrc_coeffs_q15);
 fir_init_q15(&rx.rrc_q, rrc_coeffs_q15);

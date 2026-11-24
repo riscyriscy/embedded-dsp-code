@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 1: Sampling, Q-Format, and DMA / The double-buffer (ping-pong) DMA pattern
- * Listing 4 of 57 (index 3, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 4 of 61 (index 3, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: examples/ping_pong_dma.c | Checked by: tests/test_dma.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

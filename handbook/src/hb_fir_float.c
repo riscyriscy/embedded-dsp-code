@@ -1,5 +1,5 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (section 3, FIR Filters + "Exploiting symmetry for speed").
- * Float FIR, FIR_TAPS = 32.  NOTE: Chapter 2 redefines FIR_TAPS (19, Q15) -- never include hb_fir_float.h and hb_fir_q15.h together. */
+/* Source: Embedded DSP Handbook, Chapter 2 (section 1, FIR Filters + "Exploiting symmetry for speed").
+ * Float FIR, FIR_TAPS = 32.  NOTE: Chapter 5 redefines FIR_TAPS (19, Q15) -- never include hb_fir_float.h and hb_fir_q15.h together. */
 #include "hb_fir_float.h"
 
 void fir_init(fir_filter_t *f, const float *coeffs) {

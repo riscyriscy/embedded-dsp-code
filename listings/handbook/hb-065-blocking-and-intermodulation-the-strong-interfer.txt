@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 7: RF Front-End and Link Budget Basics / Blocking and intermodulation: the strong-interferer case the margin number doesn't cover
+Embedded DSP Handbook, Chapter 10: RF Front-End and Link Budget Basics / Blocking and intermodulation: the strong-interferer case the margin number does not cover
 Listing 66 of 119 (index 65, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as:  | Checked by: formula; verified by two-tone cubic-nonlinearity simulation, -74 dBm / 47 dB / -13.7 dB chain (tests/test_C_ch7_link.c)
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

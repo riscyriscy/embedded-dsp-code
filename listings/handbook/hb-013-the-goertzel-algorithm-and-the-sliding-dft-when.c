@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / The Goertzel algorithm and the sliding DFT: when you only need one bin
- * Listing 14 of 119 (index 13, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 3: DFT and FFT / The Goertzel algorithm and the sliding DFT: when you only need one bin
+ * Listing 14 of 119 (index 13, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_goertzel.h src/hb_goertzel.c | Checked by: tests/test_A_goertzel.c (29 checks): book N=8 example (4+0j), sign convention via sine, random blocks vs double DFT, DTMF table N=105, scalloping loss -3.46 dB measured vs -3.3 dB claimed
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), goertzel_process_sample, goertzel_result and goertzel_power are replaced by a comment that points to Field Manual listing fm-016. The text below is the full listing, kept so the compiled module still matches it.
  */
 // Goertzel algorithm: compute DFT bin k (of an N-point DFT) from N real samples,
 // in O(N) work with no per-sample complex multiply. w = 2*pi*k/N is fixed for a

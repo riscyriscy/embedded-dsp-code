@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / Constellation diagrams
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / Constellation diagrams
  * Listing 114 of 119 (index 113, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_testkit.c include/hb_testkit.h | Checked by: tests/test_D_testkit.c: stdout captured and compared byte-for-byte (negative values, INT32_MIN/MAX, count 0)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

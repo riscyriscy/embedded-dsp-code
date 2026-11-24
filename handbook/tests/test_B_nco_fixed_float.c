@@ -1,4 +1,4 @@
-/* Chapter 6, "Fixed-point or floating-point NCO": one hour of a 1 kHz tone at 48 kHz (172.8 M samples) through four phase
+/* Chapter 9, "Fixed-point or floating-point NCO": one hour of a 1 kHz tone at 48 kHz (172.8 M samples) through four phase
  * representations. Asserts the numbers the book quotes (examples/nco_fixed_vs_float.c prints them). The float32 results
  * assume IEEE-754 single precision with no extended-precision evaluation (true for SSE and for Cortex-M4F). */
 #include <stdint.h>

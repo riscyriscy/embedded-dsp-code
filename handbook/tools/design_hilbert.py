@@ -1,4 +1,4 @@
-# design_hilbert.py - generator for the 31-tap Hilbert FIR of Handbook Chapter 6 (listing "hilbert_coeffs").
+# design_hilbert.py - generator for the 31-tap Hilbert FIR of Handbook Chapter 9 (listing "hilbert_coeffs").
 # The listing says "generate with scipy.signal.remez(..., type='hilbert')".
 # This script is that step: equiripple design over 0.05..0.45 of fs (symmetric about fs/4, which is what makes every
 # odd-indexed tap come out zero), then it forces the structure the listing relies on EXACTLY:

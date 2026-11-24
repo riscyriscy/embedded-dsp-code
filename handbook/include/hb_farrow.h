@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (2. Symbol timing recovery): cubic Farrow interpolator (float) and its fixed-point version.
+/* Source: Embedded DSP Handbook, Chapter 11 (2. Symbol timing recovery): cubic Farrow interpolator (float) and its fixed-point version.
  * MIT License.
  * Host build: the table definition is include/generated/farrow_weights.h, written by tools/gen_farrow_weights.py. */
 #ifndef HB_FARROW_H
@@ -8,7 +8,7 @@
 
 // Fixed-point Farrow: mu quantized to a small number of steps, each step's four Lagrange
 // weights computed once (offline, in Python/MATLAB, the same coefficient-export workflow
-// from Chapter 2) and stored as a Q15 table, never recomputed from a polynomial at runtime.
+// from Chapter 5) and stored as a Q15 table, never recomputed from a polynomial at runtime.
 #define FARROW_MU_STEPS 32   // mu resolution; more steps = finer timing resolution, more table space
 
 // weights_q15[step][0..3] = { p_m1, p_0, p_1, p_2 } for mu = step / FARROW_MU_STEPS, in Q15,

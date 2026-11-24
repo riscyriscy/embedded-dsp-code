@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / Filters you actually ship: DC blocker, notch, one-pole LPF
- * Listing 9 of 119 (index 8, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 2: FIR and IIR Filters / Filters you actually ship: DC blocker, notch, one-pole LPF
+ * Listing 9 of 119 (index 8, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_filters.h src/hb_filters.c | Checked by: tests/test_A_filters.c: DC blocker removes positive and negative DC to zero (vs double-precision reference); notch null/bandwidth/settling; one-pole step response
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), one_pole_lpf_process is replaced by a comment that points to Field Manual listing fm-013. The text below is the full listing, kept so the compiled module still matches it.
  */
 // DC blocker: removes DC offset (sensor bias, mixer LO leakage) while passing everything else
 // through with minimal distortion. R close to 1.0 (0.995-0.9997 depending on sample rate) sets

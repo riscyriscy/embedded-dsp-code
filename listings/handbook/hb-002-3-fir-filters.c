@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / 3. FIR Filters
+ * Embedded DSP Handbook, Chapter 2: FIR and IIR Filters / 1. FIR Filters
  * Listing 3 of 119 (index 2, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_fir_float.h src/hb_fir_float.c | Checked by: tests/test_A_fir_float.c (15 checks): impulse response, vs double convolution over ~19 ring wraps, boxcar -13 dB side lobe, linear phase
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (2. Symbol timing recovery): cubic Farrow interpolator (float) and its fixed-point version.
+/* Source: Embedded DSP Handbook, Chapter 11 (2. Symbol timing recovery): cubic Farrow interpolator (float) and its fixed-point version.
  * MIT License. */
 #include "hb_farrow.h"
 #include "generated/farrow_weights.h"

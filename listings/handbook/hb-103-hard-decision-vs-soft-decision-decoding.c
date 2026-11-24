@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Hard-decision vs. soft-decision decoding
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Hard-decision vs. soft-decision decoding
  * Listing 104 of 119 (index 103, counting from 0 in book order), exactly as it appears in the book.
  * Status: syntax-only | Built as: tests/shims/hbD_hb103_soft_llr_snippet.inc | Checked by: two statements with a free variable `i`; executed verbatim inside a harness function in tests/test_D_fec.c (llr = raw value at LLR_SCALE_Q, sign agrees with hard bit); LLR_SCALE_Q is defined in hb_fec.h
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

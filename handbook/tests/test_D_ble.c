@@ -1,4 +1,4 @@
-/* Chapter 13 (BLE), HB[95] GFSK bit decision, HB[96] CRC-16-CCITT and whitening (src/hb_ble.c + src/hb_fm_demod.c).
+/* Chapter 16 (BLE), HB[95] GFSK bit decision, HB[96] CRC-16-CCITT and whitening (src/hb_ble.c + src/hb_fm_demod.c).
  * References:
  *   - CRC: a bit-by-bit polynomial division written from the definition; the catalogue check value for the nine ASCII
  *     digits "123456789" (CRC-16/CCITT-FALSE = 0x29B1 for init 0xFFFF, CRC-16/XMODEM = 0x31C3 for init 0x0000); and values

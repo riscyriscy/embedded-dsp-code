@@ -1,10 +1,10 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / The production version: arm_rfft_q15 and arm_cfft_q15, called directly
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / The production version: arm_rfft_q15 and arm_cfft_q15, called directly
  * Listing 36 of 119 (index 35, counting from 0 in book order), exactly as it appears in the book.
  * Status: syntax-only | Built as: src/hb_cmsis_q15_ref.c tests/shims/hb_B_arm_math_stub.h | Checked by: tests/test_B_cmsis_spy.c: compiles against a stub and spy; checks ifftFlagR=0, bitReverseFlag=1, buffer 2*LAB0_N; library maths not testable
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
-// Q15 counterpart to Lab 0's arm_rfft_fast_f32() call (Chapter 1): same LAB0_N, Q15 samples in,
+// Q15 counterpart to Lab 0's arm_rfft_fast_f32() call (Chapter 4): same LAB0_N, Q15 samples in,
 // what an actual FPU-less target runs in place of Lab 0's float path. The output buffer is NOT
 // the same size or layout as lab0_fft_out above - see the comment on lab0_fft_out_q15 below.
 static q15_t lab0_buf_q15[LAB0_N];       // windowed Q15 samples - filled the same way Lab 0's

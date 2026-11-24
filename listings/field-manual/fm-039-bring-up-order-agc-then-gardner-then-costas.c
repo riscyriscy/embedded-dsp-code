@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Bring-up order: AGC, then Gardner, then Costas
- * Listing 40 of 57 (index 39, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 40 of 61 (index 39, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_lock.h src/fm_lock.c | Checked by: tests/test_nco_qpsk.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

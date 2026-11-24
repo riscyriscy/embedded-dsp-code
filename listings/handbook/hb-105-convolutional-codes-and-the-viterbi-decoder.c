@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Convolutional codes and the Viterbi decoder
- * Listing 106 of 119 (index 105, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Convolutional codes and the Viterbi decoder
+ * Listing 106 of 119 (index 105, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: exhaustive trellis consistency, impulse response, d_free 10, encoder vs the 171/133 tap definition
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * No longer printed in the book (November 2026): this listing is now a paragraph that points to Field Manual listing fm-045 (conv_encode_bit). The text below is the former Handbook listing, kept so the compiled module still matches it.
  */
 // Rate-1/2, constraint-length-7 convolutional encoder (the classic "NASA standard" code,
 // used historically in satellite/deep-space and Wi-Fi systems)

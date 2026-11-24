@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (Refining a single tone's frequency beyond the bin spacing).
+/* Source: Embedded DSP Handbook, Chapter 3 (Refining a single tone's frequency beyond the bin spacing).
  * MIT License.
  * HB[12], call-site snippet: alpha, beta, gamma, k_peak, fs, N are not declared in the book.
  * Included verbatim inside a harness function by tests/test_A_claims.c. */

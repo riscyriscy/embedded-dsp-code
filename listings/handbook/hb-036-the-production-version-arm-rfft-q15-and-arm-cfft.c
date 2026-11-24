@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 4: FFT Butterfly: What It Is / The production version: arm_rfft_q15 and arm_cfft_q15, called directly
+ * Embedded DSP Handbook, Chapter 7: FFT Butterfly: What It Is / The production version: arm_rfft_q15 and arm_cfft_q15, called directly
  * Listing 37 of 119 (index 36, counting from 0 in book order), exactly as it appears in the book.
  * Status: syntax-only | Built as: src/hb_cmsis_q15_ref.c tests/shims/hb_B_arm_math_stub.h | Checked by: tests/test_B_cmsis_spy.c: arm_cfft_q15(len256, buf, 0, 1) argument check via spy; library maths not testable
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

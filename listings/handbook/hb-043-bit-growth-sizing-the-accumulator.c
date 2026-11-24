@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 5: Multirate DSP: Decimation, Interpolation, and CIC Filters / Bit growth: sizing the accumulator
+ * Embedded DSP Handbook, Chapter 8: Multirate DSP: Decimation, Interpolation, and CIC Filters / Bit growth: sizing the accumulator
  * Listing 44 of 119 (index 43, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_cic.c include/hb_cic.h | Checked by: tests/test_B_cic.c (includes the .c for static cic_growth_bits): shift helper, over-removal bound, scaled output, DC levels -32768..32767
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

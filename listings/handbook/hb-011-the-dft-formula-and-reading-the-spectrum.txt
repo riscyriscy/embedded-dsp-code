@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / The DFT formula and reading the spectrum
+Embedded DSP Handbook, Chapter 3: DFT and FFT / The DFT formula and reading the spectrum
 Listing 12 of 119 (index 11, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (formula) | Checked by: DFT definition; inverse (1/N), Parseval in both conventions, conjugate mirror, bin position verified by brute force in tests/test_A_claims.c
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

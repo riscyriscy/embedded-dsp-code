@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 19 (Test and Validation Methodology): HB[111] BER counter, HB[112] required test length, HB[113] constellation dump,
+/* Source: Embedded DSP Handbook, Chapter 22 (Test and Validation Methodology): HB[111] BER counter, HB[112] required test length, HB[113] constellation dump,
  * HB[114] eye-diagram dump, HB[115] EVM, HB[116] digital-loopback helper.  MIT License.
  * Host build: stdint/stdio/stdbool/math and hb_complex.h are included; adc_read_rx_sample() (the board's ADC read) is declared. */
 #ifndef HB_TESTKIT_H
@@ -24,7 +24,7 @@ typedef struct {
 // around this number, not around a fixed wall-clock time picked without reference to it.
 
 // Digital loopback: bypass the RF front end entirely and feed modulated I/Q samples
-// straight into the demodulation chain. Verifies the DSP chain (Chapters 6, 8, 9)
+// straight into the demodulation chain. Verifies the DSP chain (Chapters 9, 11, 12)
 // independent of any RF hardware fault.
 typedef struct {
     bool loopback_enabled;

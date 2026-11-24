@@ -1,4 +1,4 @@
-/* Chapter 12 (OOK), HB[93]: envelope_magnitude() (alpha-max-plus-beta-min, alpha=1, beta=3/8) and ook_decide_bit() (src/hb_ook.c).
+/* Chapter 15 (OOK), HB[93]: envelope_magnitude() (alpha-max-plus-beta-min, alpha=1, beta=3/8) and ook_decide_bit() (src/hb_ook.c).
  * HB[94] (tag_backscatter_bit) is a HAL-dependent conceptual listing, see tests/test_D_snippets.c.
  * References: sqrt(i^2+q^2) in double; the closed-form error of max + 3/8 min (maximum at min/max = 3/8: sqrt(1+9/64) = 1.0680);
  * a synthesized Manchester-coded OOK envelope with known chips. */

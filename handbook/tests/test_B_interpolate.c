@@ -1,4 +1,4 @@
-/* HB[40]: interpolate_by_L() on Chapter 2's fir_q15_t (src/hb_interpolate.c + src/hb_fir_q15.c; FIR_TAPS = 19 from generated/coeffs.h).
+/* HB[40]: interpolate_by_L() on Chapter 5's fir_q15_t (src/hb_interpolate.c + src/hb_fir_q15.c; FIR_TAPS = 19 from generated/coeffs.h).
  * References: direct convolution of the zero-stuffed sequence in int64; the closed-form frequency response of the 19 coefficients
  * (double precision) for the passband gain and the image levels the prose talks about. */
 #include <stdint.h>
@@ -15,7 +15,7 @@ static double complex H(double f) { double complex s = 0; for (int k = 0; k < FI
 int main(void) {
     double H0 = 0; for (int k = 0; k < FIR_TAPS; k++) H0 += fir_coeffs_q15[k] / 32768.0;
     printf("  [info] sum of the 19 coefficients = %.6f (unity-gain design target 1.0)\n", H0);
-    CHECK_NEAR(H0, 1.0, 0.01, "Chapter 2 lowpass has ~unity DC gain (the prose's 'ordinary unity-gain lowpass')");
+    CHECK_NEAR(H0, 1.0, 0.01, "Chapter 5 lowpass has ~unity DC gain (the prose's 'ordinary unity-gain lowpass')");
 
     /* ---- exact output against a direct-convolution reference, L = 1..8, including saturating inputs ---- */
     for (int L = 1; L <= 8; L++) {
@@ -28,7 +28,7 @@ int main(void) {
             for (int m = 0; m < NIN * L; m++) s[m] = (m % L == 0) ? x[m / L] : 0;
             for (int m = 0; m < NIN * L; m++) {
                 int64_t acc = 0; for (int k = 0; k < FIR_TAPS; k++) if (m - k >= 0) acc += (int64_t)fir_coeffs_q15[k] * s[m - k];
-                int16_t y = clamp16((acc + 16384) >> 15);    /* FIR output (Chapter 2 rounds to nearest), saturated to int16 */
+                int16_t y = clamp16((acc + 16384) >> 15);    /* FIR output (Chapter 5 rounds to nearest), saturated to int16 */
                 ref[m] = clamp16((int64_t)y * L);              /* then scaled by L, saturated again */
             }
             int bad = 0; for (int m = 0; m < NIN * L; m++) if (out[m] != ref[m]) bad++;

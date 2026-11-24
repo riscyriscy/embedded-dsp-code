@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (5. Equalization).
+/* Source: Embedded DSP Handbook, Chapter 11 (5. Equalization).
  * lms_equalizer_t, lms_update(), lms_filter(), lms_compute_error().  MIT License. */
 #ifndef HB_LMS_EQ_H
 #define HB_LMS_EQ_H

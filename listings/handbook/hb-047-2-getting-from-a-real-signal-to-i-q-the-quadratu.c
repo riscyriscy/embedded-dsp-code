@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / 2. Getting from a real signal to I/Q: the quadrature mixer
- * Listing 48 of 119 (index 47, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / 2. Getting from a real signal to I/Q: the quadrature mixer
+ * Listing 48 of 119 (index 47, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_nco.h src/hb_nco.c | Checked by: tests/test_B_nco.c: tables vs double math (correctly rounded), phase advance/wrap, Q30 products, mixer_to_q15 rounding+saturation, tone mixed to DC
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), mixer_to_q15 is replaced by a comment that points to Field Manual listing fm-025. The text below is the full listing, kept so the compiled module still matches it.
  */
 #include <stdint.h>
 #include <math.h>

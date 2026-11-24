@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 3 (Using it via HAL).
+/* Source: Embedded DSP Handbook, Chapter 6 (Using it via HAL).
  * MIT License.
  * Listing HB[28]; reference only (STM32 HAL FMAC; placeholders left unfilled in the book).  NOT built. */
 // Shape of the FMAC HAL workflow, not verified letter-for-line against a specific STM32

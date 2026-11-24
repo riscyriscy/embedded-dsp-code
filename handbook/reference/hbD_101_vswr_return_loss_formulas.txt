@@ -1,4 +1,4 @@
-# Embedded DSP Handbook, HB[101]: Chapter 16, reflection coefficient / VSWR / return loss (formulas)
+# Embedded DSP Handbook, HB[101]: Chapter 19, reflection coefficient / VSWR / return loss (formulas)
 # Status: not-code (formula).  Listing reproduced verbatim below this banner; MIT License.
 # -----
 Gamma = (Z_antenna - Z_0) / (Z_antenna + Z_0)     // Z_0 is the system impedance, usually 50 ohms

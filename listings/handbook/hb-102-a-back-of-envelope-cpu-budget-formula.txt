@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 17: CPU Processing Requirements for Modulation and Demodulation / A back-of-envelope CPU budget formula
+Embedded DSP Handbook, Chapter 20: CPU Processing Requirements for Modulation and Demodulation / A back-of-envelope CPU budget formula
 Listing 103 of 119 (index 102, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: reference/hbD_102_cpu_budget_formula.txt | Checked by: pseudo-code formula with no worked numbers; nothing numeric to test
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
@@ -17,5 +17,5 @@ required_cycles_per_second =
 available_cycles_per_second = cpu_clock_hz * fraction_of_cpu_time_available_for_this_task
 
 // A required/available ratio meaningfully above 1 means: reduce filter/equalizer taps,
-// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 3/6), or move to
+// lower the symbol rate, offload to hardware (FMAC/CORDIC, Chapter 6/9), or move to
 // dedicated radio silicon rather than software demodulation on the general MCU.

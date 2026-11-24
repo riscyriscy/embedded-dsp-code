@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 11: Spread Spectrum: DSSS and FHSS / DSSS: spreading with a pseudorandom chip sequence
+ * Embedded DSP Handbook, Chapter 14: Spread Spectrum: DSSS and FHSS / DSSS: spreading with a pseudorandom chip sequence
  * Listing 92 of 119 (index 91, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_dsss.c include/hb_dsss.h | Checked by: tests/test_D_dsss.c: recurrence o[t+4]=o[t]^o[t+3], period 15 for all seeds, 8 ones, autocorrelation 15/-1, seed-0 lock-up, spread/despread +-ratio, shifted phase -1, tone jammer 3x suppressed
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

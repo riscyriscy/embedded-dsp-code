@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 13 (Bluetooth and BLE), HB[95] GFSK bit decision (uses fm_demod_process from hb_fm_demod), HB[96] CRC-16-CCITT and whitening.
+/* Source: Embedded DSP Handbook, Chapter 16 (Bluetooth and BLE), HB[95] GFSK bit decision (uses fm_demod_process from hb_fm_demod), HB[96] CRC-16-CCITT and whitening.
  * MIT License.
  * Host build: <stdint.h> and hb_fm_demod.h are included. */
 #ifndef HB_BLE_H

@@ -1,12 +1,12 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / Lab 0: one known tone, start to finish
+ * Embedded DSP Handbook, Chapter 4: Embedded DSP System Checklist and Lab 0 / Lab 0: one known tone, start to finish
  * Listing 17 of 119 (index 16, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: examples/hb_lab0.c tests/shims/hbA_arm_math.h | Checked by: tests/test_A_lab0.c (21 checks): Hann window, 1000 Hz -> bin 32, 1050 Hz -> bin 34, bin-centred tones, scale and persistence claims
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
 #define LAB0_N 256   // one block, one FFT's worth; the DMA pattern above used 128 for its example
 
-static dc_blocker_t   lab0_dcb = { .r_q15 = 32604 };       // R = 0.995, this chapter's DC blocker
+static dc_blocker_t   lab0_dcb = { .r_q15 = 32604 };       // R = 0.995, Chapter 2's DC blocker
 static one_pole_lpf_t lab0_lpf = { .alpha_q15 = 25956 };   // -3 dB at ~2.7 kHz (fs = 8 kHz)
 static float lab0_window[LAB0_N];                          // Hann, computed once at init
 static float lab0_buf[LAB0_N];

@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 6: Loop Tuning and Bring-Up / Loop design: Bn*T, zeta, Kp, Ki
- * Listing 38 of 57 (index 37, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 38 of 61 (index 37, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_loops.h | Checked by: tests/test_nco_qpsk.c (FLOAT_TO_Q16; COSTAS_KP_Q16 / COSTAS_KI_Q16 against the closed form)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

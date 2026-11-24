@@ -1,4 +1,4 @@
-/* TEST-ONLY shim: HB[103] verbatim (Embedded DSP Handbook, Chapter 18).  The listing is two statements that use a free variable `i`; it is
+/* TEST-ONLY shim: HB[103] verbatim (Embedded DSP Handbook, Chapter 21).  The listing is two statements that use a free variable `i`; it is
  * #included inside a function body by tests/test_D_snippets.c.  MIT License. */
 // Hard decision (as shown earlier): collapses to a bit, loses confidence information
 uint8_t hard_bit = (i < 0) ? 1 : 0;

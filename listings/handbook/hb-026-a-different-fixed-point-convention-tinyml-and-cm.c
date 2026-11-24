@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / A different fixed-point convention: TinyML and CMSIS-NN's int8
+ * Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / A different fixed-point convention: TinyML and CMSIS-NN's int8
  * Listing 27 of 119 (index 26, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_dequant.h src/hb_dequant.c | Checked by: tests/test_A_adc_dequant.c: dequantize_q15 == v/2^15 exactly over int16, affine int8 vs scale*(q-zp)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

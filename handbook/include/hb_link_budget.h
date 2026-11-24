@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 7 (Link budget: will the signal actually arrive with enough SNR).
+/* Source: Embedded DSP Handbook, Chapter 10 (Link budget: will the signal actually arrive with enough SNR).
  * link_budget_margin_db(): integer-dB margin check.
  * MIT License. */
 #ifndef HB_LINK_BUDGET_H

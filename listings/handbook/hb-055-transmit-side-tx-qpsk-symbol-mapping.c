@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Transmit side (TX): QPSK symbol mapping
+ * Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / Transmit side (TX): QPSK symbol mapping
  * Listing 56 of 119 (index 55, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_qpsk.c include/hb_qpsk.h | Checked by: tests/test_B_qpsk.c: table, Gray ring by atan2, energy, upconvert (saturating) vs I cos - Q sin, loopback through quadrature_mix
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

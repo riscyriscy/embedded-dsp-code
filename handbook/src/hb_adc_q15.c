@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 (Step 3: Map the "unity" reference).
+/* Source: Embedded DSP Handbook, Chapter 5 (Step 3: Map the "unity" reference).
  * MIT License. */
 #include "hb_adc_q15.h"
 

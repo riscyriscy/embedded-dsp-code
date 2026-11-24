@@ -1,4 +1,4 @@
-/* Chapter 9: coarse frequency estimate from the preamble (HB[80]).
+/* Chapter 12: coarse frequency estimate from the preamble (HB[80]).
  * References: complex tones of known frequency; a double-precision independent measurement of the rotation rate of the real
  * mixer's baseband output (tests the SIGN in the repo's own quadrature_mix() convention, not just the magnitude).
  * The estimate is the amount by which the received carrier sits ABOVE the NCO (add it to the NCO frequency to correct).

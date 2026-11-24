@@ -1,19 +1,19 @@
 /*
- * Embedded DSP Handbook, Chapter 19: Test and Validation Methodology / One complete loopback chain, wired end to end
+ * Embedded DSP Handbook, Chapter 22: Test and Validation Methodology / One complete loopback chain, wired end to end
  * Listing 118 of 119 (index 117, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_loopback.h src/hb_loopback.c | Checked by: tests/test_E_chain.c: 300 symbols at 2 sps with a 45 Hz offset: 0 bit errors from symbol 250 at +-45 Hz; AGC settles, Costas frequency within 15 Hz
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
 #define GARDNER_ONLY_SYMBOLS 40   // symbols of Gardner-only acquisition before the Costas loop comes
-                                   // online - Chapter 9's own staged-acquisition guidance: let timing
+                                   // online - Chapter 12's own staged-acquisition guidance: let timing
                                    // recovery converge first, then layer the (narrower) carrier loop
                                    // on top, rather than adapting both loops from sample 1.
 
 typedef struct {
     agc_t          agc;
     nco_t          nco;
-    fir_q15_t      rrc_i, rrc_q;           // matched filter state, one per rail (Chapter 8, section 1) -
-                                           // fir_q15_t, not Chapter 1's float fir_filter_t: everything in
+    fir_q15_t      rrc_i, rrc_q;           // matched filter state, one per rail (Chapter 11, section 1) -
+                                           // fir_q15_t, not Chapter 2's float fir_filter_t: everything in
                                            // this loopback runs fixed-point, mixer output included
     int32_t        hist_i[2], hist_q[2];  // most recent matched-filter outputs per rail:
                                            // [0] = mid-symbol sample, [1] = decision sample. At the

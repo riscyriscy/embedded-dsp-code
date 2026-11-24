@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
- * Listing 71 of 119 (index 70, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / 2. Symbol timing recovery: finding when to sample
+ * Listing 71 of 119 (index 70, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_timing.h src/hb_timing.c | Checked by: tests/test_C_ch8_interp.c, tests/test_C_ch8_timing.c: S-curve sign and range, convention (larger mu = later)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), timing_interpolate_linear is replaced by a comment that points to Field Manual listing fm-032. The text below is the full listing, kept so the compiled module still matches it.
  */
 typedef struct {
     int32_t mu;           // fractional timing offset, Q-format (0..1 within a sample period)

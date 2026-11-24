@@ -1,0 +1,17 @@
+calibration: 2000000 instructions counted as 2000000
+stage                              unit       instructions
+adc_to_q15                         sample         6.01
+dc_blocker_process                 sample        25.01
+one_pole_lpf_process               sample        11.01
+fir_process_q15, 19 taps           sample       204.00
+fir_process_symmetric_q15, 19 taps sample       178.48
+biquad_process_q15                 sample        70.01
+quadrature_mix and mixer_to_q15    sample        14.00
+cic_decimator_process, M = 64      sample        49.50
+goertzel_process_sample (float)    sample         7.01
+agc_apply and agc_update           sample        31.43
+qpsk_demodulate_symbol             symbol         8.01
+qpsk_soft_llr                      symbol        13.01
+conv_encode_bit                    bit           39.01
+viterbi_acs_step, 64 states        bit         1449.00
+qpsk_loopback_process_sample       sample       542.22

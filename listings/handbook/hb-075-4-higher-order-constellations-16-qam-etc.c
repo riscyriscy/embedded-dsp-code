@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / 4. Higher-order constellations (16-QAM, etc.)
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / 4. Higher-order constellations (16-QAM, etc.)
  * Listing 76 of 119 (index 75, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_qam16.h src/hb_qam16.c | Checked by: tests/test_C_ch8_qam16.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

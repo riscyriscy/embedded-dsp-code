@@ -1,11 +1,11 @@
 /*
- * Embedded DSP Handbook, Chapter 10: OFDM and Multicarrier Modulation / The core mechanism: IFFT at TX, FFT at RX
+ * Embedded DSP Handbook, Chapter 13: OFDM and Multicarrier Modulation / The core mechanism: IFFT at TX, FFT at RX
  * Listing 84 of 119 (index 83, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_ofdm.c include/hb_ofdm.h (needs src/hb_qpsk.c, src/hb_fft.c) | Checked by: tests/test_D_ofdm.c: ifft vs naive IDFT, round trip N=2048, modulate vs IDFT of Gray QPSK, bit packing, TX->RX dibits
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
 // Conceptual TX: map bits to per-subcarrier QPSK symbols, then IFFT to time domain.
-// (Reuses complex_t and qpsk_modulate_symbol from Chapter 6.)
+// (Reuses complex_t and qpsk_modulate_symbol from Chapter 9.)
 
 // A fixed-size, compile-time-bounded array, not a VLA: MISRA and several embedded
 // toolchains (C89-only, some -std flags) reject `complex_t freq_domain[num_subcarriers]`
@@ -14,9 +14,9 @@
 #define OFDM_MAX_SUBCARRIERS 2048
 
 // ifft(): the inverse transform, defined here in terms of the same forward fft() from
-// Chapter 4 rather than a second, separately maintained butterfly implementation. The
+// Chapter 7 rather than a second, separately maintained butterfly implementation. The
 // standard identity: conjugate the input, run the ordinary forward FFT unmodified,
-// conjugate the result, and scale by 1/N. This reuses Chapter 4's fft() exactly as written.
+// conjugate the result, and scale by 1/N. This reuses Chapter 7's fft() exactly as written.
 //
 // Conjugates freq_domain_in IN PLACE instead of copying it into a local scratch array
 // first: freq_domain_in isn't read again by this caller after the call returns, and an
@@ -29,7 +29,7 @@ void ifft(complex_t *freq_domain_in, complex_t *time_domain_out, int n) {
     for (int i = 0; i < n; i++) {
         freq_domain_in[i].im = -freq_domain_in[i].im;
     }
-    fft(freq_domain_in, time_domain_out, n);   // Chapter 4's forward FFT, called unmodified
+    fft(freq_domain_in, time_domain_out, n);   // Chapter 7's forward FFT, called unmodified
     for (int i = 0; i < n; i++) {
         float re = time_domain_out[i].re;
         time_domain_out[i].re =  re / n;
@@ -40,12 +40,12 @@ void ifft(complex_t *freq_domain_in, complex_t *time_domain_out, int n) {
 // freq_domain_scratch is CALLER-supplied, not a local array: the same OFDM_MAX_SUBCARRIERS
 // * 8 bytes = 16 KB that ifft() above used to hide in a local array, just moved to wherever
 // the caller actually wants that storage duration to live (typically a static or BSS
-// buffer declared once, the same pattern Chapter 1's Lab 0 already uses for its own
+// buffer declared once, the same pattern Chapter 4's Lab 0 already uses for its own
 // persistent FFT buffers) instead of growing fresh on this function's stack frame every
 // call. Not reentrant as written: two calls sharing one freq_domain_scratch buffer from
 // two contexts (two RTOS tasks, an ISR and a task) will corrupt each other's in-flight
 // symbol; give each concurrent caller its own scratch buffer if that's a real possibility,
-// the same reentrancy tradeoff Chapter 1's ping-pong DMA state carries.
+// the same reentrancy tradeoff Chapter 4's ping-pong DMA state carries.
 void ofdm_modulate_symbol(uint8_t *bits, int num_subcarriers,
                             complex_t *freq_domain_scratch, complex_t *time_domain_out) {
     for (int k = 0; k < num_subcarriers; k++) {

@@ -1,4 +1,4 @@
-/* Chapter 10 (OFDM), HB[83]..HB[89] (src/hb_ofdm.c, with fft() from src/hb_fft.c and the QPSK table from src/hb_qpsk.c).
+/* Chapter 13 (OFDM), HB[83]..HB[89] (src/hb_ofdm.c, with fft() from src/hb_fft.c and the QPSK table from src/hb_qpsk.c).
  *
  * Independent references used here (nothing below calls the code under test to compute an expectation):
  *   - a naive O(N^2) DFT/IDFT in long double, written from the definition;

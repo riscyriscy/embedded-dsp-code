@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 6 (section 2, the quadrature mixer).
+/* Source: Embedded DSP Handbook, Chapter 9 (section 2, the quadrature mixer).
  * NCO, quadrature mixer, Q30->Q15 rescale. Tables are filled at runtime by nco_table_init().
  * Host build: the tables are file-static, so nco_table_init() lives in the header as static inline;
  * M_PI needs _DEFAULT_SOURCE/_GNU_SOURCE with -std=c11.

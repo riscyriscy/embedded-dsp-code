@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include "check.h"
 #include "hb_B_arm_math_stub.h"
-#define LAB0_N 256     /* [harness] LAB0_N comes from Lab 0 (Chapter 1); any power-of-2 length works here */
+#define LAB0_N 256     /* [harness] LAB0_N comes from Lab 0 (Chapter 4); any power-of-2 length works here */
 
 /* ---- spies ---- */
 static struct { int calls; uint32_t len, ifft, brev; const arm_rfft_instance_q15 *S; } spy_init;

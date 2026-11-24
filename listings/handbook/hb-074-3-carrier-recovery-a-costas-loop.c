@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 8: Digital Demodulation In Depth / 3. Carrier recovery: a Costas loop
- * Listing 75 of 119 (index 74, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 11: Digital Demodulation In Depth / 3. Carrier recovery: a Costas loop
+ * Listing 75 of 119 (index 74, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_costas.h src/hb_costas.c (uses foundation hb_nco) | Checked by: tests/test_C_ch8_costas.c (closed loop on the real NCO/mixer): pull-in, tracking, gain units, 64-bit products
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), costas_phase_error is replaced by a comment that points to Field Manual listing fm-033. The text below is the full listing, kept so the compiled module still matches it.
  */
 // QPSK Costas loop phase detector: error ~ sign(I)*Q - sign(Q)*I
 // This is the standard 4th-order-invariant detector for QPSK.
@@ -28,7 +29,7 @@ typedef struct {
 } costas_loop_t;
 
 void costas_update(costas_loop_t *c, int32_t phase_error) {
-    // The gains turn detector units into NCO phase words (Chapter 9), so kp *
+    // The gains turn detector units into NCO phase words (Chapter 12), so kp *
     // phase_error is far wider than 32 bits: form the products in 64 bits.
     // Adding half before the >> 16 rounds to nearest; a bare shift floors,
     // which biases the integrator negative on zero-mean error.

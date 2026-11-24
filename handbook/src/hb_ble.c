@@ -1,11 +1,11 @@
-/* Source: Embedded DSP Handbook, Chapter 13 (Bluetooth and BLE), HB[95] GFSK bit decision (uses fm_demod_process from hb_fm_demod), HB[96] CRC-16-CCITT and whitening.
+/* Source: Embedded DSP Handbook, Chapter 16 (Bluetooth and BLE), HB[95] GFSK bit decision (uses fm_demod_process from hb_fm_demod), HB[96] CRC-16-CCITT and whitening.
  * MIT License.
  * Host build: <stdint.h> and hb_fm_demod.h are included. */
 #include "hb_ble.h"
 
-// GFSK bit decision: reuse fm_demod_process() from Chapter 6, then threshold per bit period.
+// GFSK bit decision: reuse fm_demod_process() from Chapter 9, then threshold per bit period.
 uint8_t gfsk_decide_bit(fm_demod_t *d, int32_t i, int32_t q) {
-    int32_t freq_estimate = fm_demod_process(d, i, q);   // same function as Chapter 6's FM demod
+    int32_t freq_estimate = fm_demod_process(d, i, q);   // same function as Chapter 9's FM demod
     return (freq_estimate > 0) ? 1 : 0;   // positive frequency deviation = 1, negative = 0 (or vice versa)
 }
 

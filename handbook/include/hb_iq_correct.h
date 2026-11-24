@@ -1,13 +1,13 @@
-/* Source: Embedded DSP Handbook, Chapter 6 (I/Q imbalance and DC offset: preventing them, not just diagnosing them).
+/* Source: Embedded DSP Handbook, Chapter 9 (I/Q imbalance and DC offset: preventing them, not just diagnosing them).
  * Code from the Embedded DSP Handbook; MIT License.
- * DC blocker per rail (Chapter 1 dc_blocker_t) and a 2x2 gain/phase imbalance corrector. */
+ * DC blocker per rail (Chapter 2 dc_blocker_t) and a 2x2 gain/phase imbalance corrector. */
 #ifndef HB_IQ_CORRECT_H
 #define HB_IQ_CORRECT_H
 
 #include <stdint.h>   /* host build */
 #include "hb_filters.h"   /* host build */
 
-// DC offset: reuse Chapter 1's DC blocker, applied independently to the I and Q rails right
+// DC offset: reuse Chapter 2's DC blocker, applied independently to the I and Q rails right
 // after the quadrature mixer, before anything else touches the samples.
 typedef struct { dc_blocker_t i_blocker, q_blocker; } iq_dc_corrector_t;
 

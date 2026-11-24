@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 14: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Bringing up and debugging a Thread node
+Embedded DSP Handbook, Chapter 17: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Bringing up and debugging a Thread node
 Listing 99 of 119 (index 98, counting from 0 in book order), exactly as it appears in the book.
 Status: reference-only | Built as: (reference) | Checked by: OpenThread CLI command list; archived, not run here
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

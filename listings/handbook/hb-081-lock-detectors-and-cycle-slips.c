@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 9: Loop-Filter Tuning for Costas and Gardner Loops / Lock detectors and cycle slips
+ * Embedded DSP Handbook, Chapter 12: Loop-Filter Tuning for Costas and Gardner Loops / Lock detectors and cycle slips
  * Listing 82 of 119 (index 81, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/hb_lock_detector.h src/hb_lock_detector.c | Checked by: tests/test_C_ch9_lock.c: dwell count, extra-fraction-bit average, lock/unlock thresholds
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

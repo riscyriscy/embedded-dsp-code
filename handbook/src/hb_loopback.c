@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 19 ("One complete loopback chain, wired end to end").
+/* Source: Embedded DSP Handbook, Chapter 22 ("One complete loopback chain, wired end to end").
  * Complete digital-loopback QPSK receiver (AGC -> mixer -> RRC -> Gardner -> Costas -> slicer -> BER).
  * MIT License. */
 #include "hb_loopback.h"

@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 5: Multirate DSP: Decimation, Interpolation, and CIC Filters / Decimation: reducing the sample rate
+ * Embedded DSP Handbook, Chapter 8: Multirate DSP: Decimation, Interpolation, and CIC Filters / Decimation: reducing the sample rate
  * Listing 39 of 119 (index 38, counting from 0 in book order), exactly as it appears in the book.
  * Status: syntax-only | Built as: include/hb_decimate_callsite.inc | Checked by: statements, not a function; tests/test_B_decimate.c includes it in a harness (supplies f, adc_samples, DECIM_FACTOR, output_buffer) and checks its output against the reference
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

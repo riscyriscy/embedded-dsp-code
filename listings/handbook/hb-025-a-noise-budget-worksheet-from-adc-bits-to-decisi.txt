@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 2: Fixed-Point Design Workflow / A noise budget worksheet: from ADC bits to decision SNR
+Embedded DSP Handbook, Chapter 5: Fixed-Point Design Workflow / A noise budget worksheet: from ADC bits to decision SNR
 Listing 26 of 119 (index 25, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (worksheet) | Checked by: worksheet in a code block; every dB figure recomputed (power-sum, 10log10(sps), 9.6+3.0 = 12.6, margin 14.4, BER 1e-5 at 9.6 dB) in tests/test_A_claims.c
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

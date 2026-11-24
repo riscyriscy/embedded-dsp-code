@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 1 (The double-buffer (ping-pong) DMA pattern, in code).
+/* Source: Embedded DSP Handbook, Chapter 4 (The double-buffer (ping-pong) DMA pattern, in code).
  * MIT License.
  * Host build (-DHB_HOST_TEST): ADC_HandleTypeDef and the CMSIS interrupt-mask intrinsics come from
  * tests/shims/hbA_stm32_hal_stub.h; on a target include your HAL header instead.  process_block() is
@@ -43,6 +43,6 @@ void main_loop_process_audio(void) {
         int16_t *block = (int16_t *)ready_block;
         ready_block = NULL;
         __set_PRIMASK(primask);
-        process_block(block, BLOCK_SIZE);   // your filter/demodulator chain, Chapters 1-9
+        process_block(block, BLOCK_SIZE);   // your filter/demodulator chain, Chapters 2-12
     }
 }

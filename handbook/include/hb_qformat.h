@@ -29,7 +29,7 @@ typedef int32_t q15_wide_t;  // Q1.15 stored in low 16 bits, or full Q17.15 in 3
 // _trunc explicitly: this plain shift truncates (floors) rather than rounds.
 // That is fine for a quick calculation, but it carries a one-directional bias
 // of -1/2 LSB per product; in an IIR section's feedback path the bias becomes
-// a DC error and can leave a stuck non-zero residue (Chapter 1's limit-cycle
+// a DC error and can leave a stuck non-zero residue (Chapter 2's limit-cycle
 // discussion). q15_mul_round below has zero mean error, the better default for
 // that use.
 static inline int32_t q15_mul_trunc(int32_t a, int32_t b) {

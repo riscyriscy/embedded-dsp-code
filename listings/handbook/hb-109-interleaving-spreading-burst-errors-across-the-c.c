@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Interleaving: spreading burst errors across the code's error-correcting reach
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Interleaving: spreading burst errors across the code's error-correcting reach
  * Listing 110 of 119 (index 109, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: closed-form permutation, exact inverse for 6 geometries, burst spread >= cols-1 (44) for every burst <= rows
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

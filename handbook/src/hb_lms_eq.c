@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (5. Equalization).
+/* Source: Embedded DSP Handbook, Chapter 11 (5. Equalization).
  * lms_equalizer_t, lms_update(), lms_filter(), lms_compute_error().  MIT License. */
 #include "hb_lms_eq.h"
 
@@ -12,7 +12,7 @@
 // size is mu / 2^31.
 void lms_update(lms_equalizer_t *eq, int32_t error_i, int32_t error_q) {
     for (int k = 0; k < EQ_TAPS; k++) {
-        // Widen to int64_t before multiplying, same rule as the FIR accumulator in Chapter 2:
+        // Widen to int64_t before multiplying, same rule as the FIR accumulator in Chapter 5:
         // error and history values are each large enough that their product alone can already
         // approach 32-bit range, and this expression multiplies by mu on top of that sum, so
         // doing the arithmetic in plain int32_t risked signed overflow (undefined behavior),
@@ -47,7 +47,7 @@ void lms_filter(lms_equalizer_t *eq, int32_t input_i, int32_t input_q,
 }
 
 // Decision-directed error: compare the equalized output against the nearest decided
-// constellation point (Chapter 6's demodulate functions), the standard way to get an
+// constellation point (Chapter 9's demodulate functions), the standard way to get an
 // error signal once the loop is already roughly locked, without a separate known
 // training sequence.
 void lms_compute_error(int32_t out_i, int32_t out_q, int32_t decided_i, int32_t decided_q,

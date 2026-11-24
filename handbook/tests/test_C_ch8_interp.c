@@ -1,4 +1,4 @@
-/* Chapter 8: timing interpolators (HB[70] linear, HB[71] cubic Farrow float, HB[72] fixed-point Farrow).
+/* Chapter 11: timing interpolators (HB[70] linear, HB[71] cubic Farrow float, HB[72] fixed-point Farrow).
  * References: exact polynomial values (4-point Lagrange is exact for cubics), true sine values, double-precision Lagrange weights.
  * timing_interpolate_farrow_cubic_q15() truncates mu to the table step at or below it (timing resolution 1/32 sample), and the
  * weight p_0(mu=0) = 1.0, which does not fit an int16_t, is stored as 32767. */

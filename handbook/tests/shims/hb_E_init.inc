@@ -13,7 +13,7 @@
 #define TIMING_KP_Q16     TIMING_GAIN_Q16(0.05192, TIMING_KD, MU_PER_SYMBOL)
 #define TIMING_KI_Q16     TIMING_GAIN_Q16(0.001385, TIMING_KD, MU_PER_SYMBOL)
 
-// Chapter 6's runtime table fill, once (not needed with the const tables):
+// Chapter 9's runtime table fill, once (not needed with the const tables):
 nco_table_init();
 radio_config_t radio_cfg = { .loopback_enabled = true };
 qpsk_loopback_rx_t rx = {
@@ -24,10 +24,10 @@ qpsk_loopback_rx_t rx = {
                                                                     // not this golden vector
     .costas      = { .kp = COSTAS_KP_Q16(0.05192, 2.0 * DECISION_AMP),
                      .ki = COSTAS_KI_Q16(0.001385, 2.0 * DECISION_AMP, 2) },
-};  // Chapter 9's worked example (Bn*T = 0.02, zeta = 0.707) in the units
+};  // Chapter 12's worked example (Bn*T = 0.02, zeta = 0.707) in the units
     // costas_update() uses
 // rrc_i / rrc_q are initialized the same way any other fir_q15_t in this book is: fir_init_q15()
-// with the RRC coefficients from Chapter 8's pulse-shape design section
+// with the RRC coefficients from Chapter 11's pulse-shape design section
 // (alpha = 0.35).
 fir_init_q15(&rx.rrc_i, rrc_coeffs_q15);
 fir_init_q15(&rx.rrc_q, rrc_coeffs_q15);

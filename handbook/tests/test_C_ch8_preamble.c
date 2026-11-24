@@ -1,4 +1,4 @@
-/* Chapter 8: sliding-correlator preamble detection (HB[68]).
+/* Chapter 11: sliding-correlator preamble detection (HB[68]).
  * Reference: a naive double-precision correlation written independently in the test.  known_preamble[] is given in
  * transmission order: known_preamble[0] meets the OLDEST of the last PREAMBLE_LEN samples, so the output peaks on the
  * preamble's last sample. */

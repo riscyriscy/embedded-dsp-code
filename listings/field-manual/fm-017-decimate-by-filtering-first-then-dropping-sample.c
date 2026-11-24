@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 4: Multirate and CIC / Decimate by filtering first, then dropping samples
- * Listing 18 of 57 (index 17, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 18 of 61 (index 17, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_fir.h src/fm_fir.c | Checked by: tests/test_filters.c (interpolate_by_L)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

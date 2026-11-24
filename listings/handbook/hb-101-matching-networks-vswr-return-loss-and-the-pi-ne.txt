@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 16: Antenna Requirements and Design / Matching networks: VSWR, return loss, and the pi-network
+Embedded DSP Handbook, Chapter 19: Antenna Requirements and Design / Matching networks: VSWR, return loss, and the pi-network
 Listing 102 of 119 (index 101, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: reference/hbD_101_vswr_return_loss_formulas.txt | Checked by: formulas; tests/test_D_formulas.c: VSWR 2:1 / 9.54 dB / 11.1% / 0.51 dB vs prose, VSWR from sampled standing wave for 5 loads
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

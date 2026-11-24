@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 7: RF Front-End and Link Budget Basics / The noise floor: what SNR is actually measured against
+Embedded DSP Handbook, Chapter 10: RF Front-End and Link Budget Basics / The noise floor: what SNR is actually measured against
 Listing 62 of 119 (index 61, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as:  | Checked by: formula; kTB from Boltzmann's constant gives -174 dBm/Hz; -121.0 dBm re-derived in tests/test_C_ch7_link.c
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

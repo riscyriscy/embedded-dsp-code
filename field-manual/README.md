@@ -15,6 +15,7 @@ make sanitize        # same tests under AddressSanitizer + UBSan
 | `examples/` | `lab0.c` (Lab 0), `ping_pong_dma.c` (double-buffer DMA pattern) and `loopback_init.c` (the Chapter 10 reset values and Chapter 6 Costas gains). |
 | `tests/` | Host tests with golden vectors. |
 | `tools/` | The book's Python design scripts (FIR, RRC, NCO table). |
+| `bench/` | Appendix A: instructions per call of every stage on a Cortex-M4F model (QEMU mps2-an386), the Chapter 12 shift and Q15 product check, and the seven tests built for the Cortex-M4F. Needs `arm-none-eabi-gcc` and `qemu-system-arm`; see `bench/README.md`. |
 
 ## Layout notes
 
@@ -40,4 +41,4 @@ All 7 pass with `-Wall -Wextra -Wpedantic` and zero warnings, and under ASan+UBS
 
 ## What is not tested
 
-Vendor HAL material and CMSIS calls are reference-only. The loopback fixture is ours (the book does not print its test signal), so `test_chain` is an algorithm check, not a bit-exact vector: on it the Costas loop pulls in the 45 Hz offset and the decoded stream matches the transmitted symbols with no bit errors from about symbol 180 on (the test scores from the receiver's 250th decision to the last transmitted symbol, which after the 9-symbol filter delay is transmitted symbols 241 to 299, 59 symbols: 0 errors in 118 bits).
+Vendor HAL material and CMSIS calls are reference-only. The stage costs in `bench/` are instruction counts on a QEMU model, not cycles measured on a board. The loopback fixture is ours (the book does not print its test signal), so `test_chain` is an algorithm check, not a bit-exact vector: on it the Costas loop pulls in the 45 Hz offset and the decoded stream matches the transmitted symbols with no bit errors from about symbol 180 on (the test scores from the receiver's 250th decision to the last transmitted symbol, which after the 9-symbol filter delay is transmitted symbols 241 to 299, 59 symbols: 0 errors in 118 bits).

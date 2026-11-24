@@ -1,4 +1,4 @@
-/* Chapter 8: 16-QAM Gray slicer (HB[75]).  Reference: the mapping the listing's comment and figure caption state
+/* Chapter 11: 16-QAM Gray slicer (HB[75]).  Reference: the mapping the listing's comment and figure caption state
  * ({-3,-1,+1,+3} -> 00,01,11,10 per axis; symbol = I bits then Q bits), written independently as a table in the test. */
 #include <stdint.h>
 #include "check.h"

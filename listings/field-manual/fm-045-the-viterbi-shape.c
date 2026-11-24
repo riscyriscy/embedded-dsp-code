@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 9: FEC and the CPU Budget / The Viterbi shape
- * Listing 46 of 57 (index 45, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 46 of 61 (index 45, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_fec.h src/fm_fec.c | Checked by: tests/test_fec.c (golden vector exact; encoder vs the 171/133 tap definition)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

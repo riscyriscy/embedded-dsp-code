@@ -1,8 +1,9 @@
 /*
- * Embedded DSP Handbook, Chapter 1: DSP Refresher for Embedded Systems / 2. Quantization & fixed-point (the part that matters most for you)
- * Listing 2 of 119 (index 1, counting from 0 in book order), exactly as it appears in the book.
+ * Embedded DSP Handbook, Chapter 1: Sampling and Quantization / 2. Quantization and fixed point
+ * Listing 2 of 119 (index 1, counting from 0 in book order), as printed in the 1.0 edition of the book.
  * Status: tested | Built as: include/hb_qformat.h | Checked by: tests/test_A_qformat.c (29 checks): FLOAT_TO_Q15 clamps/rounding, q15_mul_trunc vs floor(), saturating adds
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
+ * In the book (November 2026), q15_mul_trunc, q15_wide_add_sat and q15_add_sat are replaced by a comment that points to Field Manual listing fm-002. The text below is the full listing, kept so the compiled module still matches it.
  */
 #include <stdint.h>
 #include <math.h>   // lrintf, fmaxf, fminf below all come from here
@@ -25,7 +26,7 @@ typedef int32_t q15_wide_t;  // Q1.15 stored in low 16 bits, or full Q17.15 in 3
 // _trunc explicitly: this plain shift truncates (floors) rather than rounds.
 // That is fine for a quick calculation, but it carries a one-directional bias
 // of -1/2 LSB per product; in an IIR section's feedback path the bias becomes
-// a DC error and can leave a stuck non-zero residue (Chapter 1's limit-cycle
+// a DC error and can leave a stuck non-zero residue (Chapter 2's limit-cycle
 // discussion). q15_mul_round below has zero mean error, the better default for
 // that use.
 static inline int32_t q15_mul_trunc(int32_t a, int32_t b) {

@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 5 (Decimation: reducing the sample rate).
+/* Source: Embedded DSP Handbook, Chapter 8 (Decimation: reducing the sample rate).
  * Code from the Embedded DSP Handbook; MIT License.
  * Naive decimate-by-M on the float fir_filter_t (FIR_TAPS = 32). */
 #ifndef HB_DECIMATE_H

@@ -1,4 +1,4 @@
-/* Chapter 8: complex LMS equaliser (HB[76]).
+/* Chapter 11: complex LMS equaliser (HB[76]).
  * References: double-precision complex arithmetic for lms_filter()/lms_update(); the exact Wiener (MMSE) solution of the
  * normal equations for the test channel, solved in double with a small complex Gaussian elimination; a pure-rotation
  * channel whose ideal equaliser weight is exp(-j*phi) (checks the conjugate in the update).

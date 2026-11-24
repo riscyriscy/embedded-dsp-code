@@ -1,4 +1,4 @@
-/* Chapter 19 golden-vector check: the Handbook's digital-loopback QPSK receiver (hb_loopback.c) driven by a
+/* Chapter 22 golden-vector check: the Handbook's digital-loopback QPSK receiver (hb_loopback.c) driven by a
  * generated test signal, with the receiver initialised and driven by the text of HB[118] itself
  * (tests/shims/hb_E_init.inc and hb_E_loop.inc, #included verbatim).  The chapter does not list tx_waveform[], the carrier
  * or the RRC taps, so this fixture is ours (RRC taps: tests/rrc_coeffs_fm.h).  It is an algorithm check: not a bit-exact vector.

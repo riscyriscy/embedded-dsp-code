@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 5: Multirate DSP: Decimation, Interpolation, and CIC Filters / CIC filters: decimation/interpolation without a single multiply
+ * Embedded DSP Handbook, Chapter 8: Multirate DSP: Decimation, Interpolation, and CIC Filters / CIC filters: decimation/interpolation without a single multiply
  * Listing 42 of 119 (index 41, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_cic.c include/hb_cic.h | Checked by: tests/test_B_cic.c: vs brute-force cascaded moving sums M=1..16, DC gain M^3, counter contract, droop vs closed form
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
@@ -27,7 +27,7 @@ uint64_t cic_comb_step(cic_comb_t *s, uint64_t input) {
 
 // A decimate-by-M, order-N CIC: N integrators at input rate, decimate by M, N combs at output rate.
 // (Shown conceptually for N=3; in practice you'd loop over an array of stage structs.)
-// Returns bool + out-parameter, the same fix Chapter 5's FIR decimator needed: a sentinel
+// Returns bool + out-parameter, the same fix Chapter 8's FIR decimator needed: a sentinel
 // return value is easy for a careless caller to mistake for real data.
 //
 // decim_counter is passed BY VALUE and this function never increments it: the CALLER owns

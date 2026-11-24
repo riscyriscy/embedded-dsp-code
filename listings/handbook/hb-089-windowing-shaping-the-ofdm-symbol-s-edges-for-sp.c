@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 10: OFDM and Multicarrier Modulation / Windowing: shaping the OFDM symbol's edges for spectral containment
+ * Embedded DSP Handbook, Chapter 13: OFDM and Multicarrier Modulation / Windowing: shaping the OFDM symbol's edges for spectral containment
  * Listing 90 of 119 (index 89, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_ofdm.c include/hb_ofdm.h | Checked by: tests/test_D_ofdm.c: window == 0.5(1-cos(pi i/W)) head and mirrored tail, middle untouched; N-D3
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

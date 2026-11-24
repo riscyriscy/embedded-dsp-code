@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (2. Symbol timing recovery): timing_loop_t, timing_loop_update().
+/* Source: Embedded DSP Handbook, Chapter 11 (2. Symbol timing recovery): timing_loop_t, timing_loop_update().
  * MIT License. */
 #ifndef HB_TIMING_LOOP_H
 #define HB_TIMING_LOOP_H

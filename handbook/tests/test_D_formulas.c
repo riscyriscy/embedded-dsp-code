@@ -39,7 +39,7 @@ int main(void) {
     }
     CHECK_NEAR(vswr_of(gamma_mag(50.0 + 50.0 * I, 50.0)), 2.618034, 1e-5, "50+j50 ohm: VSWR 2.618 (golden ratio squared, closed form)");
     /* ---- prose in the same chapter: quarter-wave monopole lengths ---- */
-    CHECK_NEAR(299792458.0 / (4.0 * 2.4e9) * 1000.0, 31.2, 0.1, "quarter wave at 2.4 GHz is ~31 mm (Chapter 16 Key Lessons)");
+    CHECK_NEAR(299792458.0 / (4.0 * 2.4e9) * 1000.0, 31.2, 0.1, "quarter wave at 2.4 GHz is ~31 mm (Chapter 19 Key Lessons)");
     CHECK_NEAR(299792458.0 / (4.0 * 915e6) * 1000.0, 81.9, 0.1, "quarter wave at 915 MHz is ~82 mm");
     TEST_DONE("test_D_formulas");
 }

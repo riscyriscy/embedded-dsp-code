@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 9: Loop-Filter Tuning for Costas and Gardner Loops / The standard second-order loop design equations
+Embedded DSP Handbook, Chapter 12: Loop-Filter Tuning for Costas and Gardner Loops / The standard second-order loop design equations
 Listing 79 of 119 (index 78, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as:  | Checked by: worked arithmetic theta_n=0.01886, Kp=0.0519, Ki=0.00138 and the 78-symbol linear-model claim re-derived (tests/test_C_ch9_design.c)
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

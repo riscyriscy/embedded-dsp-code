@@ -1,4 +1,4 @@
-/* HB[94] (Chapter 12): tag_backscatter_bit() -- a conceptual, HAL-dependent listing.  It cannot run on a host without the
+/* HB[94] (Chapter 15): tag_backscatter_bit() -- a conceptual, HAL-dependent listing.  It cannot run on a host without the
  * antenna-load driver that is not part of the listing, so this is status "syntax-only": the listing is compiled verbatim (via the
  * TEST-ONLY shim tests/shims/hbD_hb094_tag_backscatter.inc) against a recording stub for set_antenna_load / LOAD_STATE_*, and the
  * test checks only the control flow the listing itself describes (bit 1 -> HIGH load, bit 0 -> LOW load, exactly one call).

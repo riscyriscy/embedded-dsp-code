@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 2 ("Closing the loop: exporting coefficients").
+/* Source: Embedded DSP Handbook, Chapter 5 ("Closing the loop: exporting coefficients").
  * Q15 FIR, FIR_TAPS = 19 from tools/design_filter.py -> include/generated/coeffs.h. */
 #include "hb_fir_q15.h"
 

@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 1: Sampling, Q-Format, and DMA / Q-format and the macros you'll reuse everywhere
- * Listing 3 of 57 (index 2, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 3 of 61 (index 2, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_qformat.h | Checked by: tests/test_filters.c (test_fir_golden_and_qformat)
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */
@@ -31,7 +31,7 @@ static inline int32_t q15_wide_add_sat(int32_t a, int32_t b) {
     return (int32_t)sum;
 }
 
-// Clamps to Q15's own +-32767 range - for two values that are already meant to be final,
+// Clamps to Q15's own range, -32768 to +32767 - for two values that are already meant to be final,
 // narrow Q15 numbers, not wide accumulator state. Reaching for the wrong one of these two
 // either clips legitimate headroom mid-accumulation, or lets a "final" value silently
 // exceed its own range.

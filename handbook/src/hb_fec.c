@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 18 (Forward Error Correction): HB[104] QPSK soft LLR, HB[105] rate-1/2 K=7 convolutional encoder, HB[106] Viterbi ACS step,
+/* Source: Embedded DSP Handbook, Chapter 21 (Forward Error Correction): HB[104] QPSK soft LLR, HB[105] rate-1/2 K=7 convolutional encoder, HB[106] Viterbi ACS step,
  * HB[107] branch-metric construction + traceback, HB[108] rate-3/4 puncturing/de-puncturing, HB[109] block interleaver,
  * HB[110] GF(2^8) tables + multiply.  MIT License.
  * Host build: stdint.h is included; LLR_SCALE_Q and MAX_TRACEBACK_DEPTH are tuning constants with defaults, overridable with -D.

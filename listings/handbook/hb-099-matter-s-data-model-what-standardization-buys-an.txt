@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 14: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Matter's data model: what standardization buys and costs
+Embedded DSP Handbook, Chapter 17: Wireless Protocol Landscape: WiFi, Thread, Zigbee, Z-Wave, and Others / Matter's data model: what standardization buys and costs
 Listing 100 of 119 (index 99, counting from 0 in book order), exactly as it appears in the book.
 Status: reference-only | Built as: (reference) | Checked by: example Matter endpoint tree for a dimmable light; archived, not built
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

@@ -1,6 +1,6 @@
 /*
  * Embedded DSP Field Manual, Chapter 10: Testing the Chain / BER: the number of bits needed
- * Listing 50 of 57 (index 49, counting from 0 in book order), exactly as it appears in the book.
+ * Listing 50 of 61 (index 49, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: include/fm_ber.h src/fm_ber.c | Checked by: tests/test_nco_qpsk.c
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.
  */

@@ -1,4 +1,4 @@
-Embedded DSP Handbook, Chapter 6: Modulation / Demodulation and I/Q Signals / Constellations and what their I and Q waveforms look like
+Embedded DSP Handbook, Chapter 9: Modulation / Demodulation and I/Q Signals / Constellations and what their I and Q waveforms look like
 Listing 58 of 119 (index 57, counting from 0 in book order), exactly as it appears in the book.
 Status: not-code | Built as: (output) | Checked by: output of tools/iq_waveforms.py (needs numpy and matplotlib; not part of make test), reproduced exactly; the same block is FM[27]
 MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

@@ -1,5 +1,5 @@
 /*
- * Embedded DSP Handbook, Chapter 18: Forward Error Correction (FEC) / Hard-decision vs. soft-decision decoding
+ * Embedded DSP Handbook, Chapter 21: Forward Error Correction (FEC) / Hard-decision vs. soft-decision decoding
  * Listing 105 of 119 (index 104, counting from 0 in book order), exactly as it appears in the book.
  * Status: tested | Built as: src/hb_fec.c include/hb_fec.h | Checked by: tests/test_D_fec.c: qpsk_soft_llr per-axis values/signs
  * MIT License. The compiled modules under field-manual/ and handbook/ contain this text, with includes and prototypes added where C needs them.

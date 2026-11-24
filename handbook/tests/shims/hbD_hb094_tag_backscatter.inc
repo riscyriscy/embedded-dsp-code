@@ -1,4 +1,4 @@
-/* TEST-ONLY shim: HB[94] verbatim (Embedded DSP Handbook, Chapter 12).  Included by tests/test_D_snippets.c together with a stub for the
+/* TEST-ONLY shim: HB[94] verbatim (Embedded DSP Handbook, Chapter 15).  Included by tests/test_D_snippets.c together with a stub for the
  * undefined HAL symbols set_antenna_load / LOAD_STATE_HIGH / LOAD_STATE_LOW.  MIT License. */
 // Conceptual illustration of backscatter load modulation at the tag (not something you'd
 // implement on a general MCU - real passive tags use dedicated analog frontend silicon -

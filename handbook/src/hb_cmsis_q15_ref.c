@@ -1,11 +1,11 @@
-/* Source: Embedded DSP Handbook, Chapter 4 (The production version: arm_rfft_q15 and arm_cfft_q15, called directly).
+/* Source: Embedded DSP Handbook, Chapter 7 (The production version: arm_rfft_q15 and arm_cfft_q15, called directly).
  * Code from the Embedded DSP Handbook; MIT License.
  * REFERENCE ONLY: needs CMSIS-DSP (arm_math.h: q15_t, arm_rfft_instance_q15, arm_cfft_instance_q15, arm_rfft_init_q15,
- * arm_rfft_q15, arm_cfft_q15) and a LAB0_N definition supplied by Lab 0 (Chapter 1). Not part of any library build.
+ * arm_rfft_q15, arm_cfft_q15) and a LAB0_N definition supplied by Lab 0 (Chapter 4). Not part of any library build.
  * tests/test_B_cmsis_spy.c includes this file against a test-only stub (tests/shims/hb_B_arm_math_stub.h) to check that it
  * compiles and that the ifftFlag/bitReverseFlag arguments the comments describe are what is actually passed. */
 
-// Q15 counterpart to Lab 0's arm_rfft_fast_f32() call (Chapter 1): same LAB0_N, Q15 samples in,
+// Q15 counterpart to Lab 0's arm_rfft_fast_f32() call (Chapter 4): same LAB0_N, Q15 samples in,
 // what an actual FPU-less target runs in place of Lab 0's float path. The output buffer is NOT
 // the same size or layout as lab0_fft_out above - see the comment on lab0_fft_out_q15 below.
 static q15_t lab0_buf_q15[LAB0_N];       // windowed Q15 samples - filled the same way Lab 0's

@@ -1,4 +1,4 @@
-/* Source: Embedded DSP Handbook, Chapter 8 (4. Higher-order constellations).
+/* Source: Embedded DSP Handbook, Chapter 11 (4. Higher-order constellations).
  * qam16_axis_decision(), qam16_demodulate_symbol().  MIT License.
  * Host build: -std=c11 -Wpedantic has no binary literals, so the 2-bit codes are written in hex (binary in the comment). */
 #include "hb_qam16.h"
