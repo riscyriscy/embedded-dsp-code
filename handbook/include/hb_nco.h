@@ -1,7 +1,7 @@
 /* Source: Embedded DSP Handbook, Chapter 9 (section 2, the quadrature mixer).
  * NCO, quadrature mixer, Q30->Q15 rescale. Tables are filled at runtime by nco_table_init().
  * Host build: the tables are file-static, so nco_table_init() lives in the header as static inline;
- * M_PI needs _DEFAULT_SOURCE/_GNU_SOURCE with -std=c11.
+ * M_PI is defined below when math.h does not provide it (strict -std=c11 does not).
  * The equations behind the code:
  *   s(t) = I(t)*cos(2*pi*fc*t) - Q(t)*sin(2*pi*fc*t)
  *   I(t) = LPF[ x(t) * cos(2*pi*fc*t) ]
@@ -12,6 +12,10 @@
 #include <stdint.h>
 #include <math.h>
 #include "hb_qformat.h"
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846   /* host build: strict C11 math.h has no M_PI */
+#endif
 
 #define NCO_TABLE_SIZE 256
 static int16_t cos_table[NCO_TABLE_SIZE];

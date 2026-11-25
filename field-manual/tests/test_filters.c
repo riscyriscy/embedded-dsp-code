@@ -186,7 +186,17 @@ static void test_cic(void) {
      * the book narrows to int32 only when it fits: check the integrator itself holds the exact value. */
     cic_decimator_t big = { 0 }; int32_t o2;
     for (int n = 0; n < 64 * 8; n++) cic_decimator_process(&big, 32767, 64, &o2);
-    CHECK(big.integ[2].accum > (int64_t)INT32_MAX, "third integrator should exceed int32 range at M=64 full scale (34-bit claim); got %lld", (long long)big.integ[2].accum);
+    CHECK(big.integ[2].accum > (uint64_t)INT32_MAX, "third integrator should exceed int32 range at M=64 full scale (34-bit claim); got %lld", (long long)big.integ[2].accum);
+    /* A DC input that runs the first integrator past 2^32 (1000 * 5,120,000 = 5.12e9). Every integrator must hold the exact
+     * running sum and every output must stay M^3 * input. A stage that narrowed its input to int32 left the 64-bit results
+     * wrong from input sample 2112 at M = 64 (the int32 output hid it, because the error is a multiple of 2^32). */
+    {
+        enum { MM = 64, AMP = 1000 }; const uint64_t n_in = 80000u * MM; cic_decimator_t w = { 0 }; int32_t o3 = 0; uint64_t wrong = 0;
+        for (uint64_t n = 1; n <= n_in; n++) if (cic_decimator_process(&w, AMP, MM, &o3) && n > 3u * MM && o3 != AMP * MM * MM * MM) wrong++;
+        CHECK(wrong == 0, "CIC DC input past 2^32: %llu outputs differ from M^3 * input", (unsigned long long)wrong);
+        CHECK(w.integ[0].accum == (uint64_t)AMP * n_in, "CIC integrator 1 holds %llu, want %llu", (unsigned long long)w.integ[0].accum, (unsigned long long)AMP * n_in);
+        CHECK(w.integ[1].accum == (uint64_t)AMP * (n_in * (n_in + 1) / 2), "CIC integrator 2 holds %llu, want %llu", (unsigned long long)w.integ[1].accum, (unsigned long long)AMP * (n_in * (n_in + 1) / 2));
+    }
     /* PDM: all-ones bitstream is a +1 DC input; alternating bits average to zero. */
     cic_decimator_t p = { 0 }; bool rdy; int32_t pcm = 0, plast = 0;
     for (int n = 0; n < 400; n++) { pdm_cic_feed_bit(&p, 1, M, &rdy, &pcm); if (rdy) plast = pcm; }

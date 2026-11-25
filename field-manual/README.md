@@ -29,7 +29,7 @@ make sanitize        # same tests under AddressSanitizer + UBSan
 
 | Program | Checks | Covers |
 |---|---|---|
-| `test_filters` | 90 | FIR incl. the Chapter 2 golden vector, Q-format, biquad, simple filters, ADC conversion (all 4096 codes), DC blocker (either sign of DC, zero-mean input, double-precision reference), Goertzel, CIC (bit-exact vs boxcar cubed), interpolation |
+| `test_filters` | 93 | FIR incl. the Chapter 2 golden vector, Q-format, biquad, simple filters, ADC conversion (all 4096 codes), DC blocker (either sign of DC, zero-mean input, double-precision reference), Goertzel, CIC (bit-exact vs boxcar cubed; a DC input that runs past 2^32 with every integrator checked against its exact running sum), interpolation |
 | `test_nco_qpsk` | 614 | NCO, mixer, QPSK map and slice, AGC (step units, closed-loop settling), timing, Costas detector, Q16 gain macros and a 64-bit loop pull-in against the linear model, lock detector |
 | `test_lab0` | 5 | Lab 0 peak at the expected bin (against a naive-DFT shim) |
 | `test_fec` | 11 | Convolutional encoder against the 171/133 octal definition, impulse response, golden vector; ACS step in a harness decoder |
@@ -37,7 +37,7 @@ make sanitize        # same tests under AddressSanitizer + UBSan
 | `test_chain` | 25 | Full loopback receiver on a generated 300-symbol signal with a 45 Hz offset (plus a sweep), AGC and Costas gains |
 | `test_vectors` | the book's own harness | "ALL VECTORS OK" |
 
-All 7 pass with `-Wall -Wextra -Wpedantic` and zero warnings, and under ASan+UBSan. "Pass" means the code does what **this repo's tests say**, not that it was validated on hardware.
+All 7 pass with `-Wall -Wextra -Wpedantic` and zero warnings, and under ASan+UBSan. `make test` also builds `src/fm_cic.c` with `-Wconversion -Werror` (`make conversion`), so an unwritten narrowing in the CIC stops the build. "Pass" means the code does what **this repo's tests say**, not that it was validated on hardware.
 
 ## What is not tested
 
